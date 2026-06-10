@@ -94,20 +94,34 @@ class LoadoutResult:
         gn = self.grenade.get("name_cn") or self.grenade["name"]
         an = self.armor.get("name_cn") or self.armor["name"]
         bn = self.booster.get("name_cn") or self.booster["name"]
-        lines.append("── Weapons ──")
-        lines.append(f"  🔫 Primary:   {pn}")
-        lines.append(f"  🔫 Secondary: {sn}")
-        lines.append(f"  💣 Grenade:   {gn}")
+        lines.append("── 武器 ──")
+        pw = WARBONDS.get(self.primary.get("warbond", ""), {})
+        sw = WARBONDS.get(self.secondary.get("warbond", ""), {})
+        gw = WARBONDS.get(self.grenade.get("warbond", ""), {})
+        pwb = pw.get("name_cn", pw.get("name", ""))
+        swb = sw.get("name_cn", sw.get("name", ""))
+        gwb = gw.get("name_cn", gw.get("name", ""))
+        lines.append(f"  🔫 主武器:   {pn}  [{pwb}]")
+        lines.append(f"  🔫 副武器:   {sn}  [{swb}]")
+        lines.append(f"  💣 投掷物:   {gn}  [{gwb}]")
         lines.append("")
-        lines.append("── Gear ──")
-        lines.append(f"  🛡️  Armor:    {an}")
-        lines.append(f"  ⚡ Booster:   {bn}")
+        lines.append("── 装备 ──")
+        aw = WARBONDS.get(self.armor.get("warbond", ""), {})
+        bw = WARBONDS.get(self.booster.get("warbond", ""), {})
+        lines.append(f"  🛡️  盔甲:     {an}  [{aw.get('name_cn', aw.get('name', ''))}]")
+        lines.append(f"  ⚡ 被动:    {bn}  [{bw.get('name_cn', bw.get('name', ''))}]")
         lines.append("")
-        lines.append("── Stratagems ──")
+        lines.append("── 战备 ──")
+        cat_cn = {"eagle": "飞鹰", "orbital": "轨道", "support_weapon": "支援武器",
+                  "backpack": "背包", "sentry": "哨戒", "vehicle": "载具",
+                  "emplacement": "工事"}
         for i, s in enumerate(self.stratagems, 1):
             sn = s.get("name_cn") or s["name"]
-            cat = s.get("category", "?").replace("_", " ").title()
-            lines.append(f"  {i}. {sn} [{cat}]")
+            cat = s.get("category", "?")
+            cat_label = cat_cn.get(cat, cat)
+            sw = WARBONDS.get(s.get("warbond", ""), {})
+            swb = sw.get("name_cn", sw.get("name", ""))
+            lines.append(f"  {i}. {sn} [{cat_label}] [{swb}]")
         lines.append("")
         lines.append("═══ For Super Earth! ═══")
         return "\n".join(lines)

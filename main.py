@@ -256,13 +256,13 @@ class MyPlugin(Star):
             label = ""
             if wtype == "primary":
                 pool = PRIMARIES
-                label = "Primary Weapons"
+                label = "主武器"
             elif wtype == "secondary":
                 pool = SECONDARIES
-                label = "Secondary Weapons"
+                label = "副武器"
             elif wtype == "grenade":
                 pool = GRENADES
-                label = "Grenades"
+                label = "投掷物"
             else:
                 return f"Unknown weapon type: {wtype}. Use primary/secondary/grenade"
 
@@ -293,12 +293,12 @@ class MyPlugin(Star):
                 lines.append(f"  ID: {wid}")
                 lines.append("")
                 all_pools = [
-                    ("Primary", PRIMARIES),
-                    ("Secondary", SECONDARIES),
-                    ("Grenade", GRENADES),
-                    ("Stratagem", STRATAGEMS),
-                    ("Armor", ARMORS),
-                    ("Booster", BOOSTERS),
+                    ("主武器", PRIMARIES),
+                    ("副武器", SECONDARIES),
+                    ("投掷物", GRENADES),
+                    ("战备", STRATAGEMS),
+                    ("盔甲", ARMORS),
+                    ("被动", BOOSTERS),
                 ]
                 for label, pool in all_pools:
                     items = [i for i in pool.values() if i["warbond"] == wid]
