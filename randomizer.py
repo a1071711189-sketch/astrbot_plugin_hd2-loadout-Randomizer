@@ -68,8 +68,10 @@ class LoadoutResult:
     def __init__(self):
         self.faction_id: str = ""
         self.faction_name: str = ""
+        self.faction_name_cn: str = ""
         self.faction_emoji: str = ""
         self.case_name: str = ""
+        self.brigade_name_cn: str = ""
         self.primary = None
         self.secondary = None
         self.grenade = None
@@ -82,7 +84,9 @@ class LoadoutResult:
     def format_for_chat(self) -> str:
         lines = []
         lines.append("══ Helldivers 2 Random Loadout ══")
-        lines.append(f"🎯 Target: {self.faction_emoji} {self.faction_name} — {self.case_name}")
+        fc = self.faction_name_cn or self.faction_name
+        bc = self.brigade_name_cn or self.case_name
+        lines.append(f"🎯 Target: {self.faction_emoji} {fc} — {bc}")
         lines.append(f"⚙️  Mode: {self.mode.upper()}  |  Power: {self.power_score:.1f}")
         lines.append("")
         pn = self.primary.get("name_cn") or self.primary["name"]
@@ -137,7 +141,7 @@ class LoadoutRandomizer:
         # Step 1: 确定派系
         faction = self._resolve_faction(faction_id)
         result.faction_id = faction["id"]
-        result.faction_name = faction["name"]
+        result.faction_name = faction.get("name_cn", faction["name"])
         result.faction_emoji = faction["emoji"]
 
         # Step 2: 确定 Case
@@ -148,6 +152,22 @@ class LoadoutRandomizer:
         else:
             case_name = self._random_case(faction)
         result.case_name = case_name
+
+        # Map DH case name to Chinese if available
+        case_cn = case_name
+        for b in BRIGADES.values():
+            if b.get("name", "").upper() == case_name.upper():
+                case_cn = b.get("name_cn", case_name)
+                break
+        result.case_name = case_cn
+
+        # 查找中文Case名
+        for b in BRIGADES.values():
+            if b.get("faction") == result.faction_id and b.get("name") == case_name:
+                result.brigade_name_cn = b.get("name_cn", case_name)
+                break
+        if not result.brigade_name_cn:
+            result.brigade_name_cn = case_name
 
         # Step 3: 获取派系战斗数据
         faction_data = self.game_data.get(faction["short"].lower(), {})

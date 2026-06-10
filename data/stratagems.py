@@ -1,4 +1,4 @@
-"""Auto-generated from game_data.json + localization_table.csv"""
+"""Auto-generated"""
 
 STRATAGEMS = {
     "orbital_precision_strike": {
@@ -495,8 +495,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.78, "elevated_overseer":0, "fleshmob":0, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":0, "leviathan":0, "lightning_spire":3, "monolith":0, "overseer":0, "research_station":0, "stingray":0, "veracitor":0, "voteless":0, "warp_ship":0, "watcher":0},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "cqc_1_one_true_flag": {
-        "id": "cqc_1_one_true_flag",
+    "cqc1_one_true_flag": {
+        "id": "cqc1_one_true_flag",
         "name": "CQC-1 ONE TRUE FLAG",
         "name_cn": "CQC-1 唯一真旗",
         "type": "stratagem",
@@ -524,8 +524,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":1, "fleshmob":0.5, "gatekeeper":0.5, "gazer":0, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":1, "harvester_shield":0.5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":4, "warp_ship":0, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":True, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "cqc_9_defoliation_tool": {
-        "id": "cqc_9_defoliation_tool",
+    "cqc9_defoliation_tool": {
+        "id": "cqc9_defoliation_tool",
         "name": "CQC-9 DEFOLIATION TOOL",
         "name_cn": "CQC-9 除叶工具",
         "type": "stratagem",
@@ -553,8 +553,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":0, "fleshmob":1, "gatekeeper":1, "gazer":2, "ground_ships_body":0, "ground_ships_shield":1.5, "harvester_body":1, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":1.5, "research_station":0, "stingray":0, "veracitor":1, "voteless":3, "warp_ship":0, "watcher":0},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":True, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "cqc_20_breaching_hammer": {
-        "id": "cqc_20_breaching_hammer",
+    "cqc20_breaching_hammer": {
+        "id": "cqc20_breaching_hammer",
         "name": "CQC-20 BREACHING HAMMER",
         "name_cn": "CQC-20 破门锤",
         "type": "stratagem",
@@ -582,8 +582,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":4, "call_in_factor":0.7625, "elevated_overseer":0, "fleshmob":3, "gatekeeper":2.5, "gazer":3, "ground_ships_body":3.5, "ground_ships_shield":3, "harvester_body":2, "harvester_shield":2, "leviathan":0, "lightning_spire":3, "monolith":0, "overseer":3.5, "research_station":0, "stingray":0, "veracitor":2.5, "voteless":3.5, "warp_ship":0, "watcher":0.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":True, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "m_105_stalwart": {
-        "id": "m_105_stalwart",
+    "m105_stalwart": {
+        "id": "m105_stalwart",
         "name": "M-105 STALWART",
         "name_cn": "M-105 盟友 ",
         "type": "stratagem",
@@ -611,8 +611,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":3, "fleshmob":3.5, "gatekeeper":2, "gazer":0, "ground_ships_body":0, "ground_ships_shield":5, "harvester_body":0.5, "harvester_shield":5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":3, "voteless":5, "warp_ship":0, "watcher":4.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "mg_43_machine_gun": {
-        "id": "mg_43_machine_gun",
+    "mg43_machine_gun": {
+        "id": "mg43_machine_gun",
         "name": "MG-43 MACHINE GUN",
         "name_cn": "MG-43 机枪",
         "type": "stratagem",
@@ -640,8 +640,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":4, "fleshmob":4, "gatekeeper":2.5, "gazer":3.5, "ground_ships_body":0, "ground_ships_shield":5, "harvester_body":2.5, "harvester_shield":5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":5, "veracitor":3.5, "voteless":5, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "mg_206_heavy_machine_gun": {
-        "id": "mg_206_heavy_machine_gun",
+    "mg206_heavy_machine_gun": {
+        "id": "mg206_heavy_machine_gun",
         "name": "MG-206 HEAVY MACHINE GUN",
         "name_cn": "MG-206 重机枪",
         "type": "stratagem",
@@ -669,8 +669,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":5, "fleshmob":4.5, "gatekeeper":3, "gazer":1, "ground_ships_body":0, "ground_ships_shield":5, "harvester_body":3.5, "harvester_shield":5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":5, "research_station":0, "stingray":5, "veracitor":3.5, "voteless":3, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "m_1000_maxigun": {
-        "id": "m_1000_maxigun",
+    "m1000_maxigun": {
+        "id": "m1000_maxigun",
         "name": "M-1000 MAXIGUN",
         "name_cn": "M-1000 重装机枪",
         "type": "stratagem",
@@ -698,8 +698,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":3.5, "fleshmob":4.5, "gatekeeper":4.5, "gazer":3.5, "ground_ships_body":0, "ground_ships_shield":5, "harvester_body":3, "harvester_shield":5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":3.5, "veracitor":4.5, "voteless":4.5, "warp_ship":0, "watcher":2},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "rs_422_railgun": {
-        "id": "rs_422_railgun",
+    "rs422_railgun": {
+        "id": "rs422_railgun",
         "name": "RS-422 RAILGUN",
         "name_cn": "RS-422 磁轨炮",
         "type": "stratagem",
@@ -730,8 +730,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"ap_direct":5, "ap_extreme":5, "ap_large":5, "ap_slight":5, "base":600, "broadcast_tower":0, "buildup":0.45, "calibre":10, "call_in":4.75, "call_in_factor":0.7625, "demolition":10, "drag":0.3, "durable":225, "elevated_overseer":4, "ergonomics":35, "fall_off_100m":0.048, "fall_off_1m":0.0001, "fall_off_25m":0.018, "fall_off_50m":0.026, "fleshmob":1.5, "gatekeeper":3.5, "gazer":1, "gravity":1, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":2.5, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "mags_spare":20, "mass":50, "monolith":0, "noise_range":48, "overseer":4, "penetration_slowdown":0, "push":15, "recoil_h":3, "recoil_v":25, "research_station":0, "spread_h":0.1, "spread_v":0.1, "stagger":35, "stingray":4, "stratagem_cooldown":410.4, "sway":1, "tactical_reload":1.2, "units":2, "velocity":2000, "veracitor":3.5, "voteless":1, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "apw_1_anti_materiel_rifle": {
-        "id": "apw_1_anti_materiel_rifle",
+    "apw1_antimateriel_rifle": {
+        "id": "apw1_antimateriel_rifle",
         "name": "APW-1 ANTI-MATERIEL RIFLE",
         "name_cn": "APW-1 反器材步枪",
         "type": "stratagem",
@@ -759,8 +759,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":3.5, "fleshmob":2, "gatekeeper":3, "gazer":5, "ground_ships_body":0, "ground_ships_shield":3, "harvester_body":3, "harvester_shield":3, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":4.5, "veracitor":3, "voteless":2, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "plas_45_epoch": {
-        "id": "plas_45_epoch",
+    "plas45_epoch": {
+        "id": "plas45_epoch",
         "name": "PLAS-45 EPOCH",
         "name_cn": "PLAS-45 纪元",
         "type": "stratagem",
@@ -788,8 +788,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":4.5, "call_in_factor":0.7625, "elevated_overseer":1.5, "fleshmob":3.5, "gatekeeper":3.5, "gazer":3.5, "ground_ships_body":4, "ground_ships_shield":2, "harvester_body":4, "harvester_shield":2, "leviathan":0, "lightning_spire":3, "monolith":0, "overseer":1, "research_station":0, "stingray":3.5, "veracitor":4, "voteless":1, "warp_ship":0, "watcher":0.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "gl_21_grenade_launcher": {
-        "id": "gl_21_grenade_launcher",
+    "gl21_grenade_launcher": {
+        "id": "gl21_grenade_launcher",
         "name": "GL-21 GRENADE LAUNCHER",
         "name_cn": "GL-21 榴弹发射器",
         "type": "stratagem",
@@ -817,8 +817,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":5, "call_in_factor":0.7625, "elevated_overseer":1, "fleshmob":4, "gatekeeper":1, "gazer":4, "ground_ships_body":4, "ground_ships_shield":3, "harvester_body":0.5, "harvester_shield":3, "leviathan":0, "lightning_spire":4, "monolith":0, "overseer":4, "research_station":0, "stingray":1, "veracitor":1.5, "voteless":4, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "gl_28_belt_fed_grenade_launcher": {
-        "id": "gl_28_belt_fed_grenade_launcher",
+    "gl28_beltfed_grenade_launcher": {
+        "id": "gl28_beltfed_grenade_launcher",
         "name": "GL-28 BELT-FED GRENADE LAUNCHER",
         "name_cn": "GL-28 弹链式榴弹发射器",
         "type": "stratagem",
@@ -846,8 +846,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":5, "call_in_factor":0.7625, "elevated_overseer":2.5, "fleshmob":4, "gatekeeper":1.5, "gazer":4, "ground_ships_body":4, "ground_ships_shield":3, "harvester_body":2, "harvester_shield":3, "leviathan":0, "lightning_spire":4.5, "monolith":0, "overseer":3, "research_station":0, "stingray":2, "veracitor":2.5, "voteless":3, "warp_ship":0, "watcher":2.5},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "gl_52_de_escalator": {
-        "id": "gl_52_de_escalator",
+    "gl52_deescalator": {
+        "id": "gl52_deescalator",
         "name": "GL-52 DE-ESCALATOR",
         "name_cn": "GL-52 缓和使者",
         "type": "stratagem",
@@ -875,8 +875,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":3, "fleshmob":4, "gatekeeper":3, "gazer":1, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":3.5, "harvester_shield":2.5, "leviathan":0, "lightning_spire":4, "monolith":0, "overseer":3, "research_station":0, "stingray":1.5, "veracitor":3, "voteless":3, "warp_ship":0, "watcher":2.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":True, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "tx_41_sterilizer": {
-        "id": "tx_41_sterilizer",
+    "tx41_sterilizer": {
+        "id": "tx41_sterilizer",
         "name": "TX-41 STERILIZER",
         "name_cn": "TX-41 灭菌器",
         "type": "stratagem",
@@ -904,8 +904,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":2, "fleshmob":1, "gatekeeper":0.5, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":1.5, "leviathan":0, "lightning_spire":1.5, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":2, "warp_ship":0, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":True, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "s_11_speargun": {
-        "id": "s_11_speargun",
+    "s11_speargun": {
+        "id": "s11_speargun",
         "name": "S-11 SPEARGUN",
         "name_cn": "S-11 矛枪",
         "type": "stratagem",
@@ -933,8 +933,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":4, "call_in_factor":0.7625, "elevated_overseer":1.5, "fleshmob":2, "gatekeeper":3, "gazer":5, "ground_ships_body":4, "ground_ships_shield":1, "harvester_body":1.5, "harvester_shield":1, "leviathan":0, "lightning_spire":5, "monolith":0, "overseer":1.5, "research_station":0, "stingray":2, "veracitor":3, "voteless":1.5, "warp_ship":0, "watcher":1.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":True, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "flam_40_flamethrower": {
-        "id": "flam_40_flamethrower",
+    "flam40_flamethrower": {
+        "id": "flam40_flamethrower",
         "name": "FLAM-40 FLAMETHROWER",
         "name_cn": "FLAM-40 火焰喷射器",
         "type": "stratagem",
@@ -962,8 +962,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":3, "fleshmob":4, "gatekeeper":3.5, "gazer":2, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":3, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":0, "veracitor":3.5, "voteless":5, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":True, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "bflam_80_cremator": {
-        "id": "bflam_80_cremator",
+    "bflam80_cremator": {
+        "id": "bflam80_cremator",
         "name": "B/FLAM-80 CREMATOR",
         "name_cn": "B/FLAM-80 焚燃者",
         "type": "stratagem",
@@ -986,8 +986,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"ap_direct":4, "ap_extreme":0, "ap_large":4, "ap_slight":4, "base":100, "broadcast_tower":0, "durable":100, "elevated_overseer":2.5, "fleshmob":5, "gatekeeper":4, "gazer":3, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":3.5, "harvester_shield":3, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":0, "units":1, "veracitor":4, "voteless":4.5, "warp_ship":0, "watcher":2},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":True, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "las_98_laser_cannon": {
-        "id": "las_98_laser_cannon",
+    "las98_laser_cannon": {
+        "id": "las98_laser_cannon",
         "name": "LAS-98 LASER CANNON",
         "name_cn": "LAS-98 激光大炮",
         "type": "stratagem",
@@ -1015,8 +1015,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":3, "fleshmob":2.5, "gatekeeper":2.5, "gazer":5, "ground_ships_body":0, "ground_ships_shield":3, "harvester_body":2.5, "harvester_shield":3, "leviathan":0, "lightning_spire":3, "monolith":0, "overseer":3, "research_station":0, "stingray":3.5, "veracitor":3, "voteless":3, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":True, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "las_99_quasar_cannon": {
-        "id": "las_99_quasar_cannon",
+    "las99_quasar_cannon": {
+        "id": "las99_quasar_cannon",
         "name": "LAS-99 QUASAR CANNON",
         "name_cn": "LAS-99 类星体加农炮",
         "type": "stratagem",
@@ -1044,8 +1044,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":5, "call_in_factor":0.7625, "elevated_overseer":0, "fleshmob":3, "gatekeeper":3.5, "gazer":3.5, "ground_ships_body":3, "ground_ships_shield":1, "harvester_body":4, "harvester_shield":1, "leviathan":0, "lightning_spire":3, "monolith":0, "overseer":0, "research_station":0, "stingray":4, "veracitor":3.5, "voteless":0, "warp_ship":2, "watcher":0},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "arc_3_arc_thrower": {
-        "id": "arc_3_arc_thrower",
+    "arc3_arc_thrower": {
+        "id": "arc3_arc_thrower",
         "name": "ARC-3 ARC THROWER",
         "name_cn": "ARC-3 电弧发射器",
         "type": "stratagem",
@@ -1073,8 +1073,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":3, "fleshmob":2.5, "gatekeeper":4.5, "gazer":0, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":2, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":4.5, "voteless":4, "warp_ship":1, "watcher":5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "mls_4x_commando": {
-        "id": "mls_4x_commando",
+    "mls4x_commando": {
+        "id": "mls4x_commando",
         "name": "MLS-4X COMMANDO",
         "name_cn": "MLS-4X 突击兵",
         "type": "stratagem",
@@ -1102,8 +1102,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":5, "call_in_factor":0.7625, "elevated_overseer":1, "fleshmob":3, "gatekeeper":4.5, "gazer":5, "ground_ships_body":3, "ground_ships_shield":5, "harvester_body":4.5, "harvester_shield":3, "leviathan":2, "lightning_spire":4.5, "monolith":0, "overseer":2, "research_station":0, "stingray":4, "veracitor":4.5, "voteless":1, "warp_ship":4, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":True, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "eat_17_expendable_anti_tank": {
-        "id": "eat_17_expendable_anti_tank",
+    "eat17_expendable_antitank": {
+        "id": "eat17_expendable_antitank",
         "name": "EAT-17 EXPENDABLE ANTI-TANK",
         "name_cn": "EAT-17 消耗性反坦克武器",
         "type": "stratagem",
@@ -1130,8 +1130,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":5, "call_in_factor":0.7625, "elevated_overseer":1, "fleshmob":2, "gatekeeper":4.5, "gazer":4, "ground_ships_body":3, "ground_ships_shield":1, "harvester_body":4, "harvester_shield":1, "leviathan":0, "lightning_spire":3, "monolith":0, "overseer":1, "research_station":0, "stingray":4, "veracitor":4.5, "voteless":0, "warp_ship":1, "watcher":0},
         "flags": {"backpack":False, "bayonet":False, "disposable":True, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "eat_700_expendable_napalm": {
-        "id": "eat_700_expendable_napalm",
+    "eat700_expendable_napalm": {
+        "id": "eat700_expendable_napalm",
         "name": "EAT-700 EXPENDABLE NAPALM",
         "name_cn": "EAT-700 消耗性凝固汽油弹",
         "type": "stratagem",
@@ -1158,8 +1158,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":5, "call_in_factor":0.7625, "elevated_overseer":1, "fleshmob":3, "gatekeeper":3, "gazer":4, "ground_ships_body":4, "ground_ships_shield":1, "harvester_body":1.5, "harvester_shield":1, "leviathan":0, "lightning_spire":2.5, "monolith":0, "overseer":2, "research_station":0, "stingray":3.5, "veracitor":3.5, "voteless":3, "warp_ship":0, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":True, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":True, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "eat_411_leveller": {
-        "id": "eat_411_leveller",
+    "eat411_leveller": {
+        "id": "eat411_leveller",
         "name": "EAT-411 LEVELLER",
         "name_cn": "EAT-411 荡平者",
         "type": "stratagem",
@@ -1186,8 +1186,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":4.5, "call_in_factor":0.7625, "elevated_overseer":1, "fleshmob":1.5, "gatekeeper":4, "gazer":1, "ground_ships_body":5, "ground_ships_shield":5, "harvester_body":5, "harvester_shield":5, "leviathan":3, "lightning_spire":1.5, "monolith":0, "overseer":1.5, "research_station":0, "stingray":0, "veracitor":4, "voteless":1.5, "warp_ship":0, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":True, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "ms_11_solo_silo": {
-        "id": "ms_11_solo_silo",
+    "ms11_solo_silo": {
+        "id": "ms11_solo_silo",
         "name": "MS-11 SOLO SILO",
         "name_cn": "MS-11 单兵导弹发射井",
         "type": "stratagem",
@@ -1214,8 +1214,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":5, "call_in_factor":0.7625, "elevated_overseer":3, "fleshmob":3, "gatekeeper":4, "gazer":1, "ground_ships_body":5, "ground_ships_shield":1, "harvester_body":4, "harvester_shield":2, "leviathan":2, "lightning_spire":2, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":3, "voteless":2, "warp_ship":1, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":True, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "mgx_42_bullet_storm": {
-        "id": "mgx_42_bullet_storm",
+    "mgx42_bullet_storm": {
+        "id": "mgx42_bullet_storm",
         "name": "MGX-42 BULLET STORM",
         "name_cn": "MGX-42 子弹风暴",
         "type": "stratagem",
@@ -1241,8 +1241,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"ap_direct":2, "ap_extreme":0, "ap_large":2, "ap_slight":2, "base":100, "broadcast_tower":0, "calibre":9, "demolition":10, "drag":0.6, "durable":25, "elevated_overseer":3, "ergonomics":25, "fleshmob":3.5, "gatekeeper":2.5, "gazer":3.5, "gravity":1, "ground_ships_body":0, "ground_ships_shield":5, "harvester_body":0, "harvester_shield":5, "leviathan":0, "lightning_spire":4, "mass":4.5, "monolith":0, "noise_range":48, "overseer":3.5, "penetration_slowdown":0.25, "push":10, "recoil_h":4.5, "recoil_v":9, "research_station":0, "spread_h":5, "spread_v":5, "stagger":20, "stingray":0, "sway":1, "units":1, "velocity":450, "veracitor":2.5, "voteless":5, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "ac_8_autocannon": {
-        "id": "ac_8_autocannon",
+    "ac8_autocannon": {
+        "id": "ac8_autocannon",
         "name": "AC-8 AUTOCANNON",
         "name_cn": "AC-8 机炮",
         "type": "stratagem",
@@ -1270,8 +1270,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":5, "call_in_factor":0.7625, "elevated_overseer":4, "fleshmob":4.5, "gatekeeper":4, "gazer":5, "ground_ships_body":4, "ground_ships_shield":4, "harvester_body":2.5, "harvester_shield":3.5, "leviathan":0, "lightning_spire":5, "monolith":0, "overseer":4, "research_station":0, "stingray":4.5, "veracitor":4.5, "voteless":3, "warp_ship":0, "watcher":3},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "rl_77_airburst_rocket_launcher": {
-        "id": "rl_77_airburst_rocket_launcher",
+    "rl77_airburst_rocket_launcher": {
+        "id": "rl77_airburst_rocket_launcher",
         "name": "RL-77 AIRBURST ROCKET LAUNCHER",
         "name_cn": "RL-77 空爆火箭弹发射器",
         "type": "stratagem",
@@ -1299,8 +1299,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":5, "call_in_factor":0.7625, "elevated_overseer":3, "fleshmob":3.5, "gatekeeper":2, "gazer":2.5, "ground_ships_body":2, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":2, "monolith":0, "overseer":3, "research_station":0, "stingray":2.5, "veracitor":2.5, "voteless":4, "warp_ship":0, "watcher":2},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "faf_14_spear": {
-        "id": "faf_14_spear",
+    "faf14_spear": {
+        "id": "faf14_spear",
         "name": "FAF-14 SPEAR",
         "name_cn": "FAF-14 飞矛",
         "type": "stratagem",
@@ -1328,8 +1328,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":0, "fleshmob":0, "gatekeeper":5, "gazer":0, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":5, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":0, "research_station":0, "stingray":4.5, "veracitor":4, "voteless":0, "warp_ship":4, "watcher":0},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "sta_x3_wasp_launcher": {
-        "id": "sta_x3_wasp_launcher",
+    "stax3_wasp_launcher": {
+        "id": "stax3_wasp_launcher",
         "name": "STA-X3 W.A.S.P. LAUNCHER",
         "name_cn": "STA-X3 W.A.S.P. 发射器",
         "type": "stratagem",
@@ -1353,8 +1353,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":5, "fleshmob":4.5, "gatekeeper":3, "gazer":4, "ground_ships_body":0, "ground_ships_shield":3, "harvester_body":3.5, "harvester_shield":3, "leviathan":0, "lightning_spire":4, "monolith":0, "overseer":4, "research_station":0, "stingray":4, "veracitor":3, "voteless":0, "warp_ship":0, "watcher":3},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "gr_8_recoilless_rifle": {
-        "id": "gr_8_recoilless_rifle",
+    "gr8_recoilless_rifle": {
+        "id": "gr8_recoilless_rifle",
         "name": "GR-8 RECOILLESS RIFLE",
         "name_cn": "GR-8 无后座力炮",
         "type": "stratagem",
@@ -1382,8 +1382,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":5, "call_in_factor":0.7625, "elevated_overseer":1, "fleshmob":2, "gatekeeper":5, "gazer":5, "ground_ships_body":4, "ground_ships_shield":1, "harvester_body":5, "harvester_shield":2.5, "leviathan":0, "lightning_spire":1, "monolith":0, "overseer":1, "research_station":0, "stingray":5, "veracitor":5, "voteless":1, "warp_ship":0, "watcher":1},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "b_1_supply_pack": {
-        "id": "b_1_supply_pack",
+    "b1_supply_pack": {
+        "id": "b1_supply_pack",
         "name": "B-1 SUPPLY PACK",
         "name_cn": "B-1 补给背包",
         "type": "stratagem",
@@ -1408,8 +1408,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.5125, "elevated_overseer":0, "fleshmob":0, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":0, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":0, "research_station":0, "stingray":0, "veracitor":0, "voteless":0, "warp_ship":0, "watcher":0},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "b_100_portable_hellbomb": {
-        "id": "b_100_portable_hellbomb",
+    "b100_portable_hellbomb": {
+        "id": "b100_portable_hellbomb",
         "name": "B-100 PORTABLE HELLBOMB",
         "name_cn": "B-100 便携式地狱火炸弹",
         "type": "stratagem",
@@ -1463,8 +1463,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":4.5, "call_in_factor":0.7625, "elevated_overseer":0.5, "fleshmob":3, "gatekeeper":3.5, "gazer":4, "ground_ships_body":5, "ground_ships_shield":3, "harvester_body":5, "harvester_shield":3, "leviathan":0, "lightning_spire":4, "monolith":0, "overseer":1, "research_station":0, "stingray":0, "veracitor":3.5, "voteless":1, "warp_ship":0, "watcher":0},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":True, "vehicle":False},
     },
-    "lift_182_warp_pack": {
-        "id": "lift_182_warp_pack",
+    "lift182_warp_pack": {
+        "id": "lift182_warp_pack",
         "name": "LIFT-182 WARP PACK",
         "name_cn": "LIFT-182 传送背包",
         "type": "stratagem",
@@ -1492,8 +1492,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"ap_direct":4, "ap_extreme":0, "ap_large":0, "ap_slight":0, "base":1000, "broadcast_tower":0, "buildup":0, "calibre":0, "demolition":20, "drag":0, "durable":1000, "elevated_overseer":0, "ergonomics":0, "fall_off_100m":0, "fall_off_1m":0, "fall_off_25m":0, "fall_off_50m":0, "fleshmob":0, "gatekeeper":0.5, "gazer":0, "gravity":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":0, "inner_radius":1.4, "leviathan":0, "lightning_spire":0, "mags_spare":0, "mass":0, "monolith":0, "noise_range":58, "outer_radius":1.5, "overseer":0.5, "push":20, "recoil_h":0, "recoil_v":0, "research_station":0, "spread_h":0, "spread_v":0, "stagger":25, "stagger_radius":2, "stingray":0, "sway":0, "tactical_reload":0, "units":1, "velocity":0, "veracitor":0.5, "voteless":2, "warp_ship":0, "watcher":0.5},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":True, "mobility_pack":True, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "lift_860_hover_pack": {
-        "id": "lift_860_hover_pack",
+    "lift860_hover_pack": {
+        "id": "lift860_hover_pack",
         "name": "LIFT-860 HOVER PACK",
         "name_cn": "LIFT-860 悬浮背包",
         "type": "stratagem",
@@ -1518,14 +1518,14 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":0, "fleshmob":0, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":0, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":0, "research_station":0, "stingray":0, "veracitor":0, "voteless":0, "warp_ship":0, "watcher":0},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":True, "mobility_pack":True, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "lift_850_jump_pack": {
-        "id": "lift_850_jump_pack",
+    "lift850_jump_pack": {
+        "id": "lift850_jump_pack",
         "name": "LIFT-850 JUMP PACK",
-        "name_cn": "LIFT-850 JUMP PACK",
+        "name_cn": "LIFT-850 喷射背包",
         "type": "stratagem",
         "category": "backpack",
         "warbond": "ship_stratagems",
-        "desc": "LIFT-850 JUMP PACK",
+        "desc": "LIFT-850 喷射背包",
         "ammo_economy": 1,
         "control": 0,
         "danger": 0,
@@ -1544,8 +1544,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":0, "fleshmob":0, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":0, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":0, "research_station":0, "stingray":0, "veracitor":0, "voteless":0, "warp_ship":0, "watcher":0},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":True, "mobility_pack":True, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "sh_32_shield_generator_pack": {
-        "id": "sh_32_shield_generator_pack",
+    "sh32_shield_generator_pack": {
+        "id": "sh32_shield_generator_pack",
         "name": "SH-32 SHIELD GENERATOR PACK",
         "name_cn": "SH-32 防护罩生成包",
         "type": "stratagem",
@@ -1570,8 +1570,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.5125, "elevated_overseer":0, "fleshmob":0, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":0, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":0, "research_station":0, "stingray":0, "veracitor":0, "voteless":0, "warp_ship":0, "watcher":0},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "sh_51_directional_shield": {
-        "id": "sh_51_directional_shield",
+    "sh51_directional_shield": {
+        "id": "sh51_directional_shield",
         "name": "SH-51 DIRECTIONAL SHIELD",
         "name_cn": "SH-51 定向护盾",
         "type": "stratagem",
@@ -1596,8 +1596,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.5125, "elevated_overseer":0, "fleshmob":0, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":0, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":0, "research_station":0, "stingray":0, "veracitor":0, "voteless":0, "warp_ship":0, "watcher":0},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "sh_20_ballistic_shield_backpack": {
-        "id": "sh_20_ballistic_shield_backpack",
+    "sh20_ballistic_shield_backpack": {
+        "id": "sh20_ballistic_shield_backpack",
         "name": "SH-20 BALLISTIC SHIELD BACKPACK",
         "name_cn": "SH-20 防护罩生成包",
         "type": "stratagem",
@@ -1622,8 +1622,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.5125, "elevated_overseer":0, "fleshmob":0, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":0, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":0, "research_station":0, "stingray":0, "veracitor":0, "voteless":0, "warp_ship":0, "watcher":0},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "axar_23_guard_dog": {
-        "id": "axar_23_guard_dog",
+    "axar23_guard_dog": {
+        "id": "axar23_guard_dog",
         "name": "AX/AR-23 GUARD DOG",
         "name_cn": "AX/AR-23 实弹狗",
         "type": "stratagem",
@@ -1648,8 +1648,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.5125, "elevated_overseer":4, "fleshmob":2.5, "gatekeeper":2, "gazer":0, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":0, "veracitor":2, "voteless":5, "warp_ship":0, "watcher":4},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "axlas_5_rover": {
-        "id": "axlas_5_rover",
+    "axlas5_rover": {
+        "id": "axlas5_rover",
         "name": "AX/LAS-5 ROVER",
         "name_cn": "AX/LAS-5 漫游车",
         "type": "stratagem",
@@ -1674,8 +1674,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.5125, "elevated_overseer":2, "fleshmob":2, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":4, "warp_ship":0, "watcher":3},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "axtx_13_dog_breath": {
-        "id": "axtx_13_dog_breath",
+    "axtx13_dog_breath": {
+        "id": "axtx13_dog_breath",
         "name": "AX/TX-13 DOG BREATH",
         "name_cn": "AX/TX-13 毒狗",
         "type": "stratagem",
@@ -1700,8 +1700,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.5125, "elevated_overseer":1.5, "fleshmob":1, "gatekeeper":0.5, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":1.5, "leviathan":0, "lightning_spire":1, "monolith":0, "overseer":1, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":3, "warp_ship":0, "watcher":1},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":True, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "axarc_3_k_9": {
-        "id": "axarc_3_k_9",
+    "axarc3_k9": {
+        "id": "axarc3_k9",
         "name": "AX/ARC-3 K-9",
         "name_cn": "电狗",
         "type": "stratagem",
@@ -1729,8 +1729,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"ap_direct":7, "ap_extreme":0, "ap_large":7, "ap_slight":7, "base":250, "broadcast_tower":0, "buildup":0, "calibre":0, "call_in":9.75, "call_in_factor":0.5125, "demolition":10, "drag":0, "durable":45, "elevated_overseer":3.5, "ergonomics":0, "fall_off_100m":0, "fall_off_1m":0, "fall_off_25m":0, "fall_off_50m":0, "fleshmob":3, "gatekeeper":2, "gazer":0, "gravity":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":1, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "mags_spare":0, "mass":0, "monolith":0, "noise_range":25, "overseer":3, "push":0, "recoil_h":0, "recoil_v":0, "research_station":0, "spread_h":0, "spread_v":0, "stagger":0, "stingray":0, "stratagem_cooldown":410.4, "sway":0, "tactical_reload":0, "units":1, "velocity":0, "veracitor":2, "voteless":4, "warp_ship":0, "watcher":3},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":True, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "axflam_75_hot_dog": {
-        "id": "axflam_75_hot_dog",
+    "axflam75_hot_dog": {
+        "id": "axflam75_hot_dog",
         "name": "AX/FLAM-75 HOT DOG",
         "name_cn": "AX/FLAM-75 热狗",
         "type": "stratagem",
@@ -1755,8 +1755,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.5125, "elevated_overseer":3.5, "fleshmob":3.5, "gatekeeper":3, "gazer":1.5, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":4, "harvester_shield":4, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":0, "veracitor":3, "voteless":4.5, "warp_ship":0, "watcher":1},
         "flags": {"backpack":True, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":True, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "td_220_bastion_mk_xvi": {
-        "id": "td_220_bastion_mk_xvi",
+    "td220_bastion_mk_xvi": {
+        "id": "td220_bastion_mk_xvi",
         "name": "TD-220 BASTION MK XVI",
         "name_cn": "TD-220 堡垒 MK XVI",
         "type": "stratagem",
@@ -1781,8 +1781,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":5, "elevated_overseer":0.5, "fleshmob":2, "gatekeeper":2, "gazer":2, "ground_ships_body":5, "ground_ships_shield":3, "harvester_body":2, "harvester_shield":2, "leviathan":2, "lightning_spire":2, "monolith":0, "overseer":3, "research_station":0, "stingray":0.5, "veracitor":2, "voteless":3.5, "warp_ship":0, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":True, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":True},
     },
-    "m_102_fast_recon_vehicle": {
-        "id": "m_102_fast_recon_vehicle",
+    "m102_fast_recon_vehicle": {
+        "id": "m102_fast_recon_vehicle",
         "name": "M-102 FAST RECON VEHICLE",
         "name_cn": "M-102 快速侦察载具",
         "type": "stratagem",
@@ -1807,8 +1807,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3, "fleshmob":1.5, "gatekeeper":1, "gazer":0, "ground_ships_body":0, "ground_ships_shield":3, "harvester_body":2, "harvester_shield":3, "leviathan":0, "lightning_spire":1, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":1.5, "voteless":4, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":True, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":True},
     },
-    "exo_49_emancipator_exosuit": {
-        "id": "exo_49_emancipator_exosuit",
+    "exo49_emancipator_exosuit": {
+        "id": "exo49_emancipator_exosuit",
         "name": "EXO-49 EMANCIPATOR EXOSUIT",
         "name_cn": "EXO-49 “解放者”外骨骼装甲",
         "type": "stratagem",
@@ -1833,8 +1833,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":5, "elevated_overseer":5, "fleshmob":4.5, "gatekeeper":4.5, "gazer":5, "ground_ships_body":4, "ground_ships_shield":5, "harvester_body":3, "harvester_shield":5, "leviathan":0, "lightning_spire":5, "monolith":0, "overseer":5, "research_station":0, "stingray":4, "veracitor":4.5, "voteless":5, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":True, "melee":False, "mobility":True, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":True},
     },
-    "exo_45_patriot_exosuit": {
-        "id": "exo_45_patriot_exosuit",
+    "exo45_patriot_exosuit": {
+        "id": "exo45_patriot_exosuit",
         "name": "EXO-45 PATRIOT EXOSUIT",
         "name_cn": "EXO-45 “爱国者”外骨骼装甲",
         "type": "stratagem",
@@ -1859,8 +1859,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":5, "elevated_overseer":3, "fleshmob":4, "gatekeeper":4, "gazer":4, "ground_ships_body":3, "ground_ships_shield":5, "harvester_body":2, "harvester_shield":5, "leviathan":0, "lightning_spire":4, "monolith":0, "overseer":4, "research_station":0, "stingray":4, "veracitor":4, "voteless":5, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":True, "melee":False, "mobility":True, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":True},
     },
-    "exo_55_breakthrough_exosuit": {
-        "id": "exo_55_breakthrough_exosuit",
+    "exo55_breakthrough_exosuit": {
+        "id": "exo55_breakthrough_exosuit",
         "name": "EXO-55 BREAKTHROUGH EXOSUIT",
         "name_cn": "EXO-55 “突破” 外骨骼装甲",
         "type": "stratagem",
@@ -1884,8 +1884,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"ap_direct":4, "ap_extreme":0, "ap_large":4, "ap_slight":4, "base":90, "broadcast_tower":0, "durable":30, "elevated_overseer":4, "fleshmob":5, "gatekeeper":4, "gazer":4.5, "ground_ships_body":3.5, "ground_ships_shield":5, "harvester_body":4.5, "harvester_shield":5, "leviathan":0, "lightning_spire":5, "monolith":0, "overseer":4, "research_station":0, "stingray":4.5, "units":1, "veracitor":4.5, "voteless":4.5, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":True, "melee":False, "mobility":True, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":True},
     },
-    "exo_51_lumberer_exosuit": {
-        "id": "exo_51_lumberer_exosuit",
+    "exo51_lumberer_exosuit": {
+        "id": "exo51_lumberer_exosuit",
         "name": "EXO-51 LUMBERER EXOSUIT",
         "name_cn": "EXO-51 “伐木者”外骨骼装甲",
         "type": "stratagem",
@@ -1909,8 +1909,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"ap_direct":6, "ap_extreme":3, "ap_large":6, "ap_slight":6, "base":1300, "broadcast_tower":5, "durable":1300, "elevated_overseer":3, "fleshmob":4.5, "gatekeeper":5, "gazer":5, "ground_ships_body":4, "ground_ships_shield":1.5, "harvester_body":5, "harvester_shield":1.5, "leviathan":0, "lightning_spire":4, "monolith":0, "overseer":4, "research_station":0, "stingray":4, "units":1, "veracitor":5, "voteless":4, "warp_ship":0, "watcher":1.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":True, "melee":False, "mobility":True, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":True},
     },
-    "ag_16_gatling_sentry": {
-        "id": "ag_16_gatling_sentry",
+    "ag16_gatling_sentry": {
+        "id": "ag16_gatling_sentry",
         "name": "A/G-16 GATLING SENTRY",
         "name_cn": "A/G-16 加特林哨戒炮",
         "type": "stratagem",
@@ -1935,8 +1935,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":4, "fleshmob":3, "gatekeeper":3.5, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":3, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":0, "veracitor":4, "voteless":5, "warp_ship":0, "watcher":5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":True, "support_weapon":False, "vehicle":False},
     },
-    "amg_43_machine_gun_sentry": {
-        "id": "amg_43_machine_gun_sentry",
+    "amg43_machine_gun_sentry": {
+        "id": "amg43_machine_gun_sentry",
         "name": "A/MG-43 MACHINE GUN SENTRY",
         "name_cn": "A/MG-43 哨戒机枪",
         "type": "stratagem",
@@ -1961,8 +1961,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":4, "fleshmob":2, "gatekeeper":3, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":0, "veracitor":3.5, "voteless":4, "warp_ship":0, "watcher":5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":True, "support_weapon":False, "vehicle":False},
     },
-    "aflam_40_flame_sentry": {
-        "id": "aflam_40_flame_sentry",
+    "aflam40_flame_sentry": {
+        "id": "aflam40_flame_sentry",
         "name": "A/FLAM-40 FLAME SENTRY",
         "name_cn": "A/FLAM-40 火焰喷射哨戒炮",
         "type": "stratagem",
@@ -1987,8 +1987,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":3, "fleshmob":1.5, "gatekeeper":2, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":3, "voteless":4, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":True, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":True, "support_weapon":False, "vehicle":False},
     },
-    "alas_98_laser_sentry": {
-        "id": "alas_98_laser_sentry",
+    "alas98_laser_sentry": {
+        "id": "alas98_laser_sentry",
         "name": "A/LAS-98 LASER SENTRY",
         "name_cn": "A/LAS-98 激光哨戒炮",
         "type": "stratagem",
@@ -2013,8 +2013,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":3.5, "fleshmob":1.5, "gatekeeper":2, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":1, "harvester_shield":1.5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":2.5, "voteless":4, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":True, "support_weapon":False, "vehicle":False},
     },
-    "amls_4x_rocket_sentry": {
-        "id": "amls_4x_rocket_sentry",
+    "amls4x_rocket_sentry": {
+        "id": "amls4x_rocket_sentry",
         "name": "A/MLS-4X ROCKET SENTRY",
         "name_cn": "A/MLS-4X 火箭哨戒炮",
         "type": "stratagem",
@@ -2039,8 +2039,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":3, "fleshmob":3, "gatekeeper":3.5, "gazer":0, "ground_ships_body":0, "ground_ships_shield":3, "harvester_body":4, "harvester_shield":4, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":3, "veracitor":3.5, "voteless":3, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":True, "support_weapon":False, "vehicle":False},
     },
-    "aac_8_autocannon_sentry": {
-        "id": "aac_8_autocannon_sentry",
+    "aac8_autocannon_sentry": {
+        "id": "aac8_autocannon_sentry",
         "name": "A/AC-8 AUTOCANNON SENTRY",
         "name_cn": "A/AC-8 自动哨戒炮",
         "type": "stratagem",
@@ -2065,8 +2065,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":4, "fleshmob":3.5, "gatekeeper":3.5, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":3, "harvester_shield":4, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":3, "veracitor":3, "voteless":3, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":True, "support_weapon":False, "vehicle":False},
     },
-    "am_23_ems_mortar_sentry": {
-        "id": "am_23_ems_mortar_sentry",
+    "am23_ems_mortar_sentry": {
+        "id": "am23_ems_mortar_sentry",
         "name": "A/M-23 EMS MORTAR SENTRY",
         "name_cn": "A/M-23 电磁冲击波迫击哨戒炮",
         "type": "stratagem",
@@ -2091,8 +2091,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":0, "fleshmob":0, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":0, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":0, "research_station":0, "stingray":0, "veracitor":0, "voteless":0, "warp_ship":0, "watcher":0},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":True, "support_weapon":False, "vehicle":False},
     },
-    "agm_17_gas_mortar_sentry": {
-        "id": "agm_17_gas_mortar_sentry",
+    "agm17_gas_mortar_sentry": {
+        "id": "agm17_gas_mortar_sentry",
         "name": "A/GM-17 GAS MORTAR SENTRY",
         "name_cn": "A/GM-17 瓦斯狙击哨戒炮",
         "type": "stratagem",
@@ -2115,8 +2115,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":1, "fleshmob":1, "gatekeeper":1, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0.5, "harvester_shield":0, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "status_duration":5, "status_strength":0.25, "stingray":0, "units":1, "veracitor":1, "voteless":4, "warp_ship":0, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":True, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":True, "support_weapon":False, "vehicle":False},
     },
-    "am_12_mortar_sentry": {
-        "id": "am_12_mortar_sentry",
+    "am12_mortar_sentry": {
+        "id": "am12_mortar_sentry",
         "name": "A/M-12 MORTAR SENTRY",
         "name_cn": "A/M-12 迫击哨戒炮",
         "type": "stratagem",
@@ -2141,8 +2141,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":2.5, "fleshmob":2, "gatekeeper":2, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0.5, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":1.5, "voteless":3, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":True, "support_weapon":False, "vehicle":False},
     },
-    "fx_12_shield_generator_relay": {
-        "id": "fx_12_shield_generator_relay",
+    "fx12_shield_generator_relay": {
+        "id": "fx12_shield_generator_relay",
         "name": "FX-12 SHIELD GENERATOR RELAY",
         "name_cn": "FX-12 防护罩生成中继器",
         "type": "stratagem",
@@ -2167,8 +2167,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":0, "fleshmob":0, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":0, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":0, "research_station":0, "stingray":0, "veracitor":0, "voteless":0, "warp_ship":0, "watcher":0},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "egl_21_grenadier_battlement": {
-        "id": "egl_21_grenadier_battlement",
+    "egl21_grenadier_battlement": {
+        "id": "egl21_grenadier_battlement",
         "name": "E/GL-21 GRENADIER BATTLEMENT",
         "name_cn": "E/GL-21 掷弹兵防卫墙",
         "type": "stratagem",
@@ -2193,8 +2193,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":3, "call_in_factor":0.7625, "elevated_overseer":3.5, "fleshmob":4, "gatekeeper":0.5, "gazer":2, "ground_ships_body":2, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":2, "leviathan":0, "lightning_spire":3, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":1, "voteless":3.5, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":True, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "eat_12_anti_tank_emplacement": {
-        "id": "eat_12_anti_tank_emplacement",
+    "eat12_antitank_emplacement": {
+        "id": "eat12_antitank_emplacement",
         "name": "E/AT-12 ANTI-TANK EMPLACEMENT",
         "name_cn": "E/AT-12 反坦克炮台",
         "type": "stratagem",
@@ -2219,8 +2219,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":3, "call_in_factor":0.7625, "elevated_overseer":3, "fleshmob":3, "gatekeeper":3.5, "gazer":2, "ground_ships_body":3, "ground_ships_shield":3, "harvester_body":4.5, "harvester_shield":3, "leviathan":0, "lightning_spire":2, "monolith":0, "overseer":3, "research_station":0, "stingray":3, "veracitor":3, "voteless":1.5, "warp_ship":4, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":True, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "emg_101_hmg_emplacement": {
-        "id": "emg_101_hmg_emplacement",
+    "emg101_hmg_emplacement": {
+        "id": "emg101_hmg_emplacement",
         "name": "E/MG-101 HMG EMPLACEMENT",
         "name_cn": "E/MG-101 重机枪部署支架",
         "type": "stratagem",
@@ -2245,8 +2245,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":4, "fleshmob":3, "gatekeeper":4, "gazer":1, "ground_ships_body":0, "ground_ships_shield":3, "harvester_body":3, "harvester_shield":4, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":2, "veracitor":3.5, "voteless":4, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":True, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "aarc_3_tesla_tower": {
-        "id": "aarc_3_tesla_tower",
+    "aarc3_tesla_tower": {
+        "id": "aarc3_tesla_tower",
         "name": "A/ARC-3 TESLA TOWER",
         "name_cn": "A/ARC-3 特斯拉塔",
         "type": "stratagem",
@@ -2271,8 +2271,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":3, "fleshmob":3, "gatekeeper":2.5, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":1, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":0, "veracitor":3, "voteless":5, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":True, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":True, "support_weapon":False, "vehicle":False},
     },
-    "md_17_anti_tank_mines": {
-        "id": "md_17_anti_tank_mines",
+    "md17_antitank_mines": {
+        "id": "md17_antitank_mines",
         "name": "MD-17 ANTI-TANK MINES",
         "name_cn": "MD-17 反坦克导弹",
         "type": "stratagem",
@@ -2296,8 +2296,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":0, "fleshmob":2, "gatekeeper":3, "gazer":0.5, "ground_ships_body":0, "ground_ships_shield":3, "harvester_body":2, "harvester_shield":0, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":0, "research_station":0, "stingray":0, "veracitor":3, "voteless":0, "warp_ship":0, "watcher":0},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "md_8_gas_mines": {
-        "id": "md_8_gas_mines",
+    "md8_gas_mines": {
+        "id": "md8_gas_mines",
         "name": "MD-8 GAS MINES",
         "name_cn": "MD-8 毒气地雷",
         "type": "stratagem",
@@ -2322,8 +2322,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":1, "fleshmob":1.5, "gatekeeper":1.5, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":0, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2.5, "research_station":0, "stingray":0, "veracitor":1.5, "voteless":4, "warp_ship":0, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":True, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "md_6_anti_personnel_minefield": {
-        "id": "md_6_anti_personnel_minefield",
+    "md6_antipersonnel_minefield": {
+        "id": "md6_antipersonnel_minefield",
         "name": "MD-6 ANTI-PERSONNEL MINEFIELD",
         "name_cn": "MD-6 反步兵地雷",
         "type": "stratagem",
@@ -2348,8 +2348,8 @@ STRATAGEMS = {
         "enemy_scores_squids": {"broadcast_tower":0, "call_in_factor":0.7625, "elevated_overseer":1, "fleshmob":2.5, "gatekeeper":2, "gazer":0.5, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":0, "veracitor":2, "voteless":4, "warp_ship":0, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "md_14_incendiary_mines": {
-        "id": "md_14_incendiary_mines",
+    "md14_incendiary_mines": {
+        "id": "md14_incendiary_mines",
         "name": "MD-14 INCENDIARY MINES",
         "name_cn": "MD-14 燃烧地雷",
         "type": "stratagem",

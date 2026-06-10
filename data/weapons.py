@@ -1,8 +1,8 @@
-"""Auto-generated from game_data.json + localization_table.csv"""
+"""Auto-generated"""
 
 PRIMARIES = {
-    "ar_23_liberator": {
-        "id": "ar_23_liberator",
+    "ar23_liberator": {
+        "id": "ar23_liberator",
         "name": "AR-23 LIBERATOR",
         "name_cn": "AR-23 解放者",
         "type": "primary",
@@ -29,8 +29,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2, "fleshmob":1, "gatekeeper":0.5, "gazer":2, "ground_ships_body":0, "ground_ships_shield":3, "harvester_body":0, "harvester_shield":3, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":1, "voteless":4, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "ar_23p_liberator_penetrator": {
-        "id": "ar_23p_liberator_penetrator",
+    "ar23p_liberator_penetrator": {
+        "id": "ar23p_liberator_penetrator",
         "name": "AR-23P LIBERATOR PENETRATOR",
         "name_cn": "AR-23P 穿甲“解放者”",
         "type": "primary",
@@ -57,8 +57,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3, "fleshmob":1.5, "gatekeeper":0.5, "gazer":2.5, "ground_ships_body":0, "ground_ships_shield":3, "harvester_body":0, "harvester_shield":3, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "stingray":1.5, "veracitor":1.5, "voteless":4, "warp_ship":0, "watcher":3.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "ar_23a_liberator_carbine": {
-        "id": "ar_23a_liberator_carbine",
+    "ar23a_liberator_carbine": {
+        "id": "ar23a_liberator_carbine",
         "name": "AR-23A LIBERATOR CARBINE",
         "name_cn": "AR-23A “解放者”卡宾枪",
         "type": "primary",
@@ -85,8 +85,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2, "fleshmob":2, "gatekeeper":1, "gazer":2.5, "ground_ships_body":0, "ground_ships_shield":4, "harvester_body":0, "harvester_shield":4, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":1, "voteless":5, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "ar_23c_liberator_concussive": {
-        "id": "ar_23c_liberator_concussive",
+    "ar23c_liberator_concussive": {
+        "id": "ar23c_liberator_concussive",
         "name": "AR-23C LIBERATOR CONCUSSIVE",
         "name_cn": "AR-23C 震荡“解放者”",
         "type": "primary",
@@ -113,8 +113,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":1, "fleshmob":1, "gatekeeper":0.5, "gazer":1.5, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":3, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":1, "voteless":4, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "sta_52_assault_rifle": {
-        "id": "sta_52_assault_rifle",
+    "sta52_assault_rifle": {
+        "id": "sta52_assault_rifle",
         "name": "STA-52 ASSAULT RIFLE",
         "name_cn": "STA-52 突击步枪",
         "type": "primary",
@@ -141,8 +141,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3, "fleshmob":2, "gatekeeper":1, "gazer":2, "ground_ships_body":0, "ground_ships_shield":4, "harvester_body":0, "harvester_shield":4, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":1.5, "voteless":4.5, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "ar_32_pacifier": {
-        "id": "ar_32_pacifier",
+    "ar32_pacifier": {
+        "id": "ar32_pacifier",
         "name": "AR-32 PACIFIER",
         "name_cn": "AR-32 安抚者",
         "type": "primary",
@@ -169,8 +169,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2.5, "fleshmob":1, "gatekeeper":0.5, "gazer":2, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0.5, "harvester_shield":2.5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2.5, "research_station":0, "stingray":1, "veracitor":1, "voteless":4, "warp_ship":0, "watcher":3.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "br_14_adjudicator": {
-        "id": "br_14_adjudicator",
+    "br14_adjudicator": {
+        "id": "br14_adjudicator",
         "name": "BR-14 ADJUDICATOR",
         "name_cn": "BR-14 审判者",
         "type": "primary",
@@ -197,8 +197,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":4, "fleshmob":2, "gatekeeper":0.5, "gazer":2.5, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":2, "veracitor":1.5, "voteless":3, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "ar_61_tenderiser": {
-        "id": "ar_61_tenderiser",
+    "ar61_tenderiser": {
+        "id": "ar61_tenderiser",
         "name": "AR-61 TENDERISER",
         "name_cn": "AR-61 肉垂",
         "type": "primary",
@@ -253,8 +253,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2.5, "fleshmob":1.5, "gatekeeper":1, "gazer":3, "ground_ships_body":0, "ground_ships_shield":3, "harvester_body":0, "harvester_shield":3, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "stingray":2, "veracitor":1.5, "voteless":3, "warp_ship":0, "watcher":3.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "ar_2_coyote": {
-        "id": "ar_2_coyote",
+    "ar2_coyote": {
+        "id": "ar2_coyote",
         "name": "AR-2 COYOTE",
         "name_cn": "AR-2 野狼",
         "type": "primary",
@@ -281,8 +281,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":4, "fleshmob":3.5, "gatekeeper":1, "gazer":3.5, "ground_ships_body":0, "ground_ships_shield":3.5, "harvester_body":1.5, "harvester_shield":3.5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":2.5, "veracitor":2, "voteless":4.5, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":True, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "argl_21_one_two": {
-        "id": "argl_21_one_two",
+    "argl21_one_two": {
+        "id": "argl21_one_two",
         "name": "AR/GL-21 ONE TWO",
         "name_cn": "AR/GL-21 幺二",
         "type": "primary",
@@ -309,8 +309,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":3, "elevated_overseer":2, "fleshmob":1, "gatekeeper":0.5, "gazer":4, "ground_ships_body":4, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":2.5, "leviathan":0, "lightning_spire":4, "monolith":0, "overseer":2.5, "research_station":0, "stingray":0, "veracitor":1, "voteless":3.5, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "ar_59_suppressor": {
-        "id": "ar_59_suppressor",
+    "ar59_suppressor": {
+        "id": "ar59_suppressor",
         "name": "AR-59 SUPPRESSOR",
         "name_cn": "AR-59 消音器",
         "type": "primary",
@@ -337,8 +337,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":1.5, "fleshmob":1, "gatekeeper":1, "gazer":2, "ground_ships_body":0, "ground_ships_shield":2.5, "harvester_body":0, "harvester_shield":3, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":1, "voteless":4, "warp_ship":0, "watcher":3.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "r_2_amendment": {
-        "id": "r_2_amendment",
+    "r2_amendment": {
+        "id": "r2_amendment",
         "name": "R-2 AMENDMENT",
         "name_cn": "R-2 修正",
         "type": "primary",
@@ -365,8 +365,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3.5, "fleshmob":2.5, "gatekeeper":1, "gazer":3, "ground_ships_body":0, "ground_ships_shield":2.5, "harvester_body":0, "harvester_shield":2.5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3.5, "research_station":0, "stingray":0, "veracitor":1.5, "voteless":3, "warp_ship":0, "watcher":4.5},
         "flags": {"backpack":False, "bayonet":True, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "r_2124_constitution": {
-        "id": "r_2124_constitution",
+    "r2124_constitution": {
+        "id": "r2124_constitution",
         "name": "R-2124 CONSTITUTION",
         "name_cn": "R-2124 宪法",
         "type": "primary",
@@ -393,8 +393,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2, "fleshmob":0.5, "gatekeeper":0.5, "gazer":0.5, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0.5, "veracitor":0.5, "voteless":2, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":True, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "r_6_deadeye": {
-        "id": "r_6_deadeye",
+    "r6_deadeye": {
+        "id": "r6_deadeye",
         "name": "R-6 DEADEYE",
         "name_cn": "R-6 鹰眼",
         "type": "primary",
@@ -421,8 +421,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3, "fleshmob":1, "gatekeeper":0.5, "gazer":2, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":1, "harvester_shield":1.5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "stingray":1.5, "veracitor":1.5, "voteless":2, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "r_63_diligence": {
-        "id": "r_63_diligence",
+    "r63_diligence": {
+        "id": "r63_diligence",
         "name": "R-63 DILIGENCE",
         "name_cn": "R-63 勤勉",
         "type": "primary",
@@ -449,8 +449,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3, "fleshmob":1.5, "gatekeeper":1, "gazer":2, "ground_ships_body":0, "ground_ships_shield":3, "harvester_body":0, "harvester_shield":3, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3.5, "research_station":0, "stingray":0, "veracitor":1.5, "voteless":3.5, "warp_ship":0, "watcher":3.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "r_72_censor": {
-        "id": "r_72_censor",
+    "r72_censor": {
+        "id": "r72_censor",
         "name": "R-72 CENSOR",
         "name_cn": "R-72 审查官",
         "type": "primary",
@@ -477,8 +477,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2, "fleshmob":1, "gatekeeper":0.5, "gazer":1.5, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":2.5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2.5, "research_station":0, "stingray":0, "veracitor":1, "voteless":2.5, "warp_ship":0, "watcher":3.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "r_63cs_diligence_counter_sniper": {
-        "id": "r_63cs_diligence_counter_sniper",
+    "r63cs_diligence_counter_sniper": {
+        "id": "r63cs_diligence_counter_sniper",
         "name": "R-63CS DILIGENCE COUNTER SNIPER",
         "name_cn": "R-63CS 反狙击“勤勉”",
         "type": "primary",
@@ -505,8 +505,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":4, "fleshmob":1.5, "gatekeeper":0.5, "gazer":2, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":1, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":1.5, "veracitor":1.5, "voteless":2.5, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "plas_39_accelerator_rifle": {
-        "id": "plas_39_accelerator_rifle",
+    "plas39_accelerator_rifle": {
+        "id": "plas39_accelerator_rifle",
         "name": "PLAS-39 ACCELERATOR RIFLE",
         "name_cn": "PLAS-39 加速步枪",
         "type": "primary",
@@ -533,8 +533,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":4, "fleshmob":2, "gatekeeper":0.5, "gazer":2, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":1, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":2.5, "veracitor":2, "voteless":1, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "mp_98_knight": {
-        "id": "mp_98_knight",
+    "mp98_knight": {
+        "id": "mp98_knight",
         "name": "MP-98 KNIGHT",
         "name_cn": "MP-98 骑士",
         "type": "primary",
@@ -561,8 +561,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2.5, "fleshmob":2, "gatekeeper":0.5, "gazer":1.5, "ground_ships_body":0, "ground_ships_shield":4, "harvester_body":0, "harvester_shield":4, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2.5, "research_station":0, "stingray":0, "veracitor":1, "voteless":5, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "sta_11_smg": {
-        "id": "sta_11_smg",
+    "sta11_smg": {
+        "id": "sta11_smg",
         "name": "STA-11 SMG",
         "name_cn": "STA-11 冲锋枪",
         "type": "primary",
@@ -589,8 +589,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2, "fleshmob":2.5, "gatekeeper":0.5, "gazer":1.5, "ground_ships_body":0, "ground_ships_shield":4, "harvester_body":0, "harvester_shield":4, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2.5, "research_station":0, "stingray":0, "veracitor":1, "voteless":4.5, "warp_ship":0, "watcher":2.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "smg_37_defender": {
-        "id": "smg_37_defender",
+    "smg37_defender": {
+        "id": "smg37_defender",
         "name": "SMG-37 DEFENDER",
         "name_cn": "SMG-37 防卫者",
         "type": "primary",
@@ -617,8 +617,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2.5, "fleshmob":2, "gatekeeper":1, "gazer":2, "ground_ships_body":0, "ground_ships_shield":3, "harvester_body":0, "harvester_shield":3, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":1, "voteless":4, "warp_ship":0, "watcher":3.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "smg_72_pummeller": {
-        "id": "smg_72_pummeller",
+    "smg72_pummeller": {
+        "id": "smg72_pummeller",
         "name": "SMG-72 PUMMELLER",
         "name_cn": "SMG-72 暴击斗士",
         "type": "primary",
@@ -645,8 +645,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3, "fleshmob":2, "gatekeeper":1, "gazer":2, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":1, "voteless":4, "warp_ship":0, "watcher":3.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "smg_32_reprimand": {
-        "id": "smg_32_reprimand",
+    "smg32_reprimand": {
+        "id": "smg32_reprimand",
         "name": "SMG-32 REPRIMAND",
         "name_cn": "SMG-32 训斥",
         "type": "primary",
@@ -673,8 +673,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3, "fleshmob":2.5, "gatekeeper":0.5, "gazer":3, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":1.5, "veracitor":1.5, "voteless":3, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "smg_203_gallant": {
-        "id": "smg_203_gallant",
+    "smg203_gallant": {
+        "id": "smg203_gallant",
         "name": "SMG-203 GALLANT",
         "name_cn": "SMG-203 英勇无畏",
         "type": "primary",
@@ -732,8 +732,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"ap_direct":2, "ap_extreme":0, "ap_large":2, "ap_slight":2, "base":80, "broadcast_tower":0, "buildup":0, "calibre":9, "cooling_rate":0, "demolition":10, "drag":1.2, "durable":16, "elevated_overseer":2, "ergonomics":90, "fall_off_100m":0, "fall_off_1m":0, "fall_off_25m":0, "fall_off_50m":0, "fleshmob":1, "gatekeeper":1, "gazer":1.5, "gravity":1, "ground_ships_body":0, "ground_ships_shield":3.5, "harvester_body":0, "harvester_shield":3, "leviathan":0, "lifetime":0, "lightning_spire":0, "mags_spare":7, "mass":7, "max_range":0, "monolith":0, "noise_range":13, "overheat_cooldown":0, "overheat_max":0, "overheat_rate":0, "overseer":3, "penetration_slowdown":0.25, "push":5, "recoil_h":0, "recoil_v":0, "research_station":0, "spread_h":5, "spread_v":5, "stagger":10, "status_duration":0, "status_strength":0, "stingray":0, "sway":1.2, "tactical_reload":0, "units":1, "velocity":320, "veracitor":1, "voteless":4.5, "warp_ship":0, "watcher":2.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "smgflam_34_stoker": {
-        "id": "smgflam_34_stoker",
+    "smgflam34_stoker": {
+        "id": "smgflam34_stoker",
         "name": "SMG/FLAM-34 STOKER",
         "name_cn": "SMG/FLAM-34 司炉者",
         "type": "primary",
@@ -758,8 +758,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"ap_direct":4, "ap_extreme":0, "ap_large":4, "ap_slight":4, "base":100, "broadcast_tower":0, "buildup":0.5, "durable":100, "elevated_overseer":3.5, "fleshmob":2, "gatekeeper":1, "gazer":1, "ground_ships_body":0, "ground_ships_shield":3, "harvester_body":0, "harvester_shield":3.5, "leviathan":0, "lightning_spire":0, "mags_spare":3, "max_range":20, "monolith":0, "overseer":4, "research_station":0, "stingray":0, "tactical_reload":2.5, "units":1, "veracitor":1.5, "voteless":4.5, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":True, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "sg_20_halt": {
-        "id": "sg_20_halt",
+    "sg20_halt": {
+        "id": "sg20_halt",
         "name": "SG-20 HALT",
         "name_cn": "SG-20 止息",
         "type": "primary",
@@ -786,8 +786,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3, "fleshmob":2.5, "gatekeeper":0.5, "gazer":1, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "stingray":0.5, "veracitor":1.5, "voteless":2, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "sg_8_punisher": {
-        "id": "sg_8_punisher",
+    "sg8_punisher": {
+        "id": "sg8_punisher",
         "name": "SG-8 PUNISHER",
         "name_cn": "SG-8 制裁者",
         "type": "primary",
@@ -814,8 +814,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2, "fleshmob":1.5, "gatekeeper":0.5, "gazer":0.5, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":1, "voteless":3, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "sg_8s_slugger": {
-        "id": "sg_8s_slugger",
+    "sg8s_slugger": {
+        "id": "sg8s_slugger",
         "name": "SG-8S SLUGGER",
         "name_cn": "SG-8S 重炮手",
         "type": "primary",
@@ -842,8 +842,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3, "fleshmob":1.5, "gatekeeper":0.5, "gazer":1.5, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0.5, "veracitor":1, "voteless":2, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "sg_451_cookout": {
-        "id": "sg_451_cookout",
+    "sg451_cookout": {
+        "id": "sg451_cookout",
         "name": "SG-451 COOKOUT",
         "name_cn": "SG-451 野炊",
         "type": "primary",
@@ -870,8 +870,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2, "fleshmob":2, "gatekeeper":0.5, "gazer":0.5, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":1, "voteless":5, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":True, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "sg_97_sweeper": {
-        "id": "sg_97_sweeper",
+    "sg97_sweeper": {
+        "id": "sg97_sweeper",
         "name": "SG-97 SWEEPER",
         "name_cn": "SG-97 扫荡者",
         "type": "primary",
@@ -898,8 +898,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"ap_direct":0, "ap_extreme":0, "ap_large":0, "ap_slight":0, "base":42, "broadcast_tower":0, "calibre":12, "demolition":10, "drag":0.3, "durable":11, "elevated_overseer":3.5, "ergonomics":65, "fleshmob":3.5, "gatekeeper":0.5, "gazer":3, "gravity":1, "ground_ships_body":0, "ground_ships_shield":1.5, "harvester_body":1, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "mags_spare":10, "mass":10, "monolith":0, "noise_range":48, "overseer":3.5, "penetration_slowdown":0.25, "push":20, "recoil_h":57.5, "recoil_v":95, "research_station":0, "spread_h":125, "spread_v":105, "stagger":20, "stingray":1, "sway":1, "tactical_reload":2.2, "units":12, "velocity":385, "veracitor":1.5, "voteless":2, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":True, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "dbs_2_double_freedom": {
-        "id": "dbs_2_double_freedom",
+    "dbs2_double_freedom": {
+        "id": "dbs2_double_freedom",
         "name": "DBS-2 DOUBLE FREEDOM",
         "name_cn": "DBS-2 双重自由",
         "type": "primary",
@@ -926,8 +926,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3.5, "fleshmob":4, "gatekeeper":0.5, "gazer":3.5, "ground_ships_body":0, "ground_ships_shield":3, "harvester_body":2, "harvester_shield":2.5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":0.5, "veracitor":1.5, "voteless":2.5, "warp_ship":0, "watcher":3.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "sg_225_breaker": {
-        "id": "sg_225_breaker",
+    "sg225_breaker": {
+        "id": "sg225_breaker",
         "name": "SG-225 BREAKER",
         "name_cn": "SG-225 破裂者",
         "type": "primary",
@@ -954,8 +954,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3, "fleshmob":3, "gatekeeper":1, "gazer":0.5, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":0, "veracitor":1, "voteless":4, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "sg_225sp_breaker_spray_pray": {
-        "id": "sg_225sp_breaker_spray_pray",
+    "sg225sp_breaker_spray__pray": {
+        "id": "sg225sp_breaker_spray__pray",
         "name": "SG-225SP BREAKER SPRAY & PRAY",
         "name_cn": "SG-225SP 千发百中“破裂者”",
         "type": "primary",
@@ -982,8 +982,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2, "fleshmob":3, "gatekeeper":0.5, "gazer":0.5, "ground_ships_body":0, "ground_ships_shield":3, "harvester_body":0, "harvester_shield":3, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":5, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "sg_225ie_breaker_incendiary": {
-        "id": "sg_225ie_breaker_incendiary",
+    "sg225ie_breaker_incendiary": {
+        "id": "sg225ie_breaker_incendiary",
         "name": "SG-225IE BREAKER INCENDIARY",
         "name_cn": "SG-225IE 高燃“破裂者”",
         "type": "primary",
@@ -1041,8 +1041,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"ap_direct":2, "ap_extreme":0, "ap_large":2, "ap_slight":2, "base":55, "broadcast_tower":0, "buildup":0, "calibre":8, "demolition":10, "drag":0.5, "durable":15, "elevated_overseer":2, "ergonomics":65, "fall_off_100m":0, "fall_off_1m":0, "fall_off_25m":0, "fall_off_50m":0, "fleshmob":0.5, "gatekeeper":0.5, "gazer":2, "gravity":1, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":1.5, "leviathan":0, "lightning_spire":0, "mags_spare":7.33, "mass":6, "monolith":0, "noise_range":48, "overseer":2.5, "penetration_slowdown":0.25, "push":30, "recoil_h":0, "recoil_v":0, "research_station":0, "spread_h":120, "spread_v":100, "stagger":35, "stingray":0, "sway":1, "tactical_reload":0, "units":11, "velocity":385, "veracitor":0.5, "voteless":2, "warp_ship":0, "watcher":2.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "cb_9_exploding_crossbow": {
-        "id": "cb_9_exploding_crossbow",
+    "cb9_exploding_crossbow": {
+        "id": "cb9_exploding_crossbow",
         "name": "CB-9 EXPLODING CROSSBOW",
         "name_cn": "CB-9 爆燃弩",
         "type": "primary",
@@ -1069,8 +1069,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3.5, "fleshmob":2.5, "gatekeeper":1, "gazer":4.5, "ground_ships_body":4, "ground_ships_shield":1, "harvester_body":1, "harvester_shield":1, "leviathan":0, "lightning_spire":5, "monolith":0, "overseer":4, "research_station":0, "stingray":1, "veracitor":1.5, "voteless":4, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "vg_70_variable": {
-        "id": "vg_70_variable",
+    "vg70_variable": {
+        "id": "vg70_variable",
         "name": "VG-70 VARIABLE",
         "name_cn": "VG-70 变数",
         "type": "primary",
@@ -1100,8 +1100,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"ap_direct":2, "ap_extreme":0, "ap_large":2, "ap_slight":2, "base":85, "broadcast_tower":0, "buildup":0, "calibre":9, "demolition":10, "drag":0.6, "durable":20, "elevated_overseer":3.5, "ergonomics":0, "fall_off_100m":0, "fall_off_1m":0, "fall_off_25m":0, "fall_off_50m":0, "fleshmob":2.5, "gatekeeper":1, "gazer":2, "gravity":1, "ground_ships_body":0, "ground_ships_shield":4, "harvester_body":0, "harvester_shield":4, "leviathan":0, "lightning_spire":0, "mags_spare":7, "mass":7, "monolith":0, "noise_range":48, "overseer":4, "penetration_slowdown":0.25, "push":4, "recoil_h":0, "recoil_v":0, "research_station":0, "spread_h":5, "spread_v":5, "stagger":10, "stingray":0, "sway":1, "tactical_reload":3, "units":49, "velocity":320, "veracitor":1, "voteless":3, "warp_ship":0, "watcher":3.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "jar_5_dominator": {
-        "id": "jar_5_dominator",
+    "jar5_dominator": {
+        "id": "jar5_dominator",
         "name": "JAR-5 DOMINATOR",
         "name_cn": "JAR-5 主宰",
         "type": "primary",
@@ -1128,8 +1128,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":4, "fleshmob":3, "gatekeeper":0.5, "gazer":1.5, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":1, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":5, "research_station":0, "stingray":2.5, "veracitor":1, "voteless":3, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "r_36_eruptor": {
-        "id": "r_36_eruptor",
+    "r36_eruptor": {
+        "id": "r36_eruptor",
         "name": "R-36 ERUPTOR",
         "name_cn": "R-36 爆裂铳",
         "type": "primary",
@@ -1156,8 +1156,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2, "fleshmob":3.5, "gatekeeper":1, "gazer":4, "ground_ships_body":4, "ground_ships_shield":1, "harvester_body":1, "harvester_shield":1, "leviathan":0, "lightning_spire":3, "monolith":0, "overseer":3, "research_station":0, "stingray":2, "veracitor":2.5, "voteless":3.5, "warp_ship":0, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "sg_8p_punisher_plasma": {
-        "id": "sg_8p_punisher_plasma",
+    "sg8p_punisher_plasma": {
+        "id": "sg8p_punisher_plasma",
         "name": "SG-8P PUNISHER PLASMA",
         "name_cn": "SG-8P 等离子“制裁者”",
         "type": "primary",
@@ -1184,8 +1184,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3.5, "fleshmob":3, "gatekeeper":0.5, "gazer":1.5, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":0.5, "veracitor":2, "voteless":4, "warp_ship":0, "watcher":1.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "arc_12_blitzer": {
-        "id": "arc_12_blitzer",
+    "arc12_blitzer": {
+        "id": "arc12_blitzer",
         "name": "ARC-12 BLITZER",
         "name_cn": "ARC-12 雷霆",
         "type": "primary",
@@ -1212,8 +1212,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3, "fleshmob":2, "gatekeeper":0.5, "gazer":0.5, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":4, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "las_5_scythe": {
-        "id": "las_5_scythe",
+    "las5_scythe": {
+        "id": "las5_scythe",
         "name": "LAS-5 SCYTHE",
         "name_cn": "LAS-5 长柄镰",
         "type": "primary",
@@ -1240,8 +1240,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3.5, "fleshmob":2, "gatekeeper":0.5, "gazer":2, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":4, "warp_ship":0, "watcher":3.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":True, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "las_16_sickle": {
-        "id": "las_16_sickle",
+    "las16_sickle": {
+        "id": "las16_sickle",
         "name": "LAS-16 SICKLE",
         "name_cn": "LAS-16 镰刀",
         "type": "primary",
@@ -1268,8 +1268,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3, "fleshmob":2.5, "gatekeeper":0.5, "gazer":2, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":4, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "las_17_double_edge_sickle": {
-        "id": "las_17_double_edge_sickle",
+    "las17_doubleedge_sickle": {
+        "id": "las17_doubleedge_sickle",
         "name": "LAS-17 DOUBLE-EDGE SICKLE",
         "name_cn": "LAS-17 双刃镰刀",
         "type": "primary",
@@ -1296,8 +1296,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3.5, "fleshmob":3, "gatekeeper":0.5, "gazer":2, "ground_ships_body":0, "ground_ships_shield":4, "harvester_body":2, "harvester_shield":4, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":0.5, "veracitor":1, "voteless":4, "warp_ship":0, "watcher":4.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":True, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "las_13_trident": {
-        "id": "las_13_trident",
+    "las13_trident": {
+        "id": "las13_trident",
         "name": "LAS-13 TRIDENT",
         "name_cn": "LAS-13 “三叉戟”",
         "type": "primary",
@@ -1324,8 +1324,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2.5, "fleshmob":3.5, "gatekeeper":0.5, "gazer":2.5, "ground_ships_body":0, "ground_ships_shield":3.5, "harvester_body":0, "harvester_shield":5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":1, "voteless":4.5, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "plas_1_scorcher": {
-        "id": "plas_1_scorcher",
+    "plas1_scorcher": {
+        "id": "plas1_scorcher",
         "name": "PLAS-1 SCORCHER",
         "name_cn": "PLAS-1 焦土",
         "type": "primary",
@@ -1352,8 +1352,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":5, "fleshmob":3, "gatekeeper":0.5, "gazer":2, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":1, "harvester_shield":3, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":5, "research_station":0, "stingray":2, "veracitor":1.5, "voteless":3, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "plas_101_purifier": {
-        "id": "plas_101_purifier",
+    "plas101_purifier": {
+        "id": "plas101_purifier",
         "name": "PLAS-101 PURIFIER",
         "name_cn": "PLAS-101 净化者",
         "type": "primary",
@@ -1380,8 +1380,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3.5, "fleshmob":3, "gatekeeper":0.5, "gazer":1, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":1, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":2, "veracitor":2, "voteless":3, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "flam_66_torcher": {
-        "id": "flam_66_torcher",
+    "flam66_torcher": {
+        "id": "flam66_torcher",
         "name": "FLAM-66 TORCHER",
         "name_cn": "FLAM-66 火炬手",
         "type": "primary",
@@ -1408,8 +1408,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3, "fleshmob":3.5, "gatekeeper":1.5, "gazer":1.5, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":0, "veracitor":3.5, "voteless":5, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":True, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "las_7_dagger": {
-        "id": "las_7_dagger",
+    "las7_dagger": {
+        "id": "las7_dagger",
         "name": "LAS-7 DAGGER",
         "name_cn": "LAS-7 匕首",
         "type": "primary",
@@ -1436,8 +1436,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2, "fleshmob":1, "gatekeeper":0, "gazer":0.5, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":3, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "sg_22_bushwhacker": {
-        "id": "sg_22_bushwhacker",
+    "sg22_bushwhacker": {
+        "id": "sg22_bushwhacker",
         "name": "SG-22 BUSHWHACKER",
         "name_cn": "SG-22 游击兵",
         "type": "primary",
@@ -1464,8 +1464,8 @@ PRIMARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3, "fleshmob":1, "gatekeeper":0.5, "gazer":0.5, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":3, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "p_35_re_educator": {
-        "id": "p_35_re_educator",
+    "p35_reeducator": {
+        "id": "p35_reeducator",
         "name": "P-35 RE-EDUCATOR",
         "name_cn": "P-35 思想改造",
         "type": "primary",
@@ -1495,8 +1495,8 @@ PRIMARIES = {
 }
 
 SECONDARIES = {
-    "p_2_peacemaker": {
-        "id": "p_2_peacemaker",
+    "p2_peacemaker": {
+        "id": "p2_peacemaker",
         "name": "P-2 PEACEMAKER",
         "name_cn": "P-2 和平制造者",
         "type": "secondary",
@@ -1523,8 +1523,8 @@ SECONDARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":1, "fleshmob":0.5, "gatekeeper":0, "gazer":0.5, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":1, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":3, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "p_19_redeemer": {
-        "id": "p_19_redeemer",
+    "p19_redeemer": {
+        "id": "p19_redeemer",
         "name": "P-19 REDEEMER",
         "name_cn": "P-19 救世主",
         "type": "secondary",
@@ -1551,8 +1551,8 @@ SECONDARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2, "fleshmob":0.5, "gatekeeper":0.5, "gazer":0.5, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":4, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "gp_31_grenade_pistol": {
-        "id": "gp_31_grenade_pistol",
+    "gp31_grenade_pistol": {
+        "id": "gp31_grenade_pistol",
         "name": "GP-31 GRENADE PISTOL",
         "name_cn": "GP-31 榴弹手枪",
         "type": "secondary",
@@ -1579,8 +1579,8 @@ SECONDARIES = {
         "enemy_scores_squids": {"broadcast_tower":4, "elevated_overseer":1, "fleshmob":1, "gatekeeper":0, "gazer":3.5, "ground_ships_body":4, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":4, "monolith":0, "overseer":1, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":2, "warp_ship":0, "watcher":0.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "gp_20_ultimatum": {
-        "id": "gp_20_ultimatum",
+    "gp20_ultimatum": {
+        "id": "gp20_ultimatum",
         "name": "GP-20 ULTIMATUM",
         "name_cn": "GP-20 最后通牒",
         "type": "secondary",
@@ -1607,8 +1607,8 @@ SECONDARIES = {
         "enemy_scores_squids": {"broadcast_tower":4, "elevated_overseer":1.5, "fleshmob":4, "gatekeeper":2, "gazer":4, "ground_ships_body":5, "ground_ships_shield":1, "harvester_body":2, "harvester_shield":1, "leviathan":0, "lightning_spire":2.5, "monolith":0, "overseer":1.5, "research_station":0, "stingray":0, "veracitor":3, "voteless":1, "warp_ship":1, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "p_4_senator": {
-        "id": "p_4_senator",
+    "p4_senator": {
+        "id": "p4_senator",
         "name": "P-4 SENATOR",
         "name_cn": "P-4 参议员",
         "type": "secondary",
@@ -1635,8 +1635,8 @@ SECONDARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":4, "fleshmob":1, "gatekeeper":0.5, "gazer":1, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":4, "research_station":0, "stingray":1, "veracitor":1.5, "voteless":2, "warp_ship":0, "watcher":4},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "p_113_verdict": {
-        "id": "p_113_verdict",
+    "p113_verdict": {
+        "id": "p113_verdict",
         "name": "P-113 VERDICT",
         "name_cn": "P-113 裁决",
         "type": "secondary",
@@ -1663,14 +1663,14 @@ SECONDARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3, "fleshmob":1, "gatekeeper":0.5, "gazer":0.5, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0.5, "veracitor":1, "voteless":4, "warp_ship":0, "watcher":3.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "p_92_warrant": {
-        "id": "p_92_warrant",
+    "p92_warrant": {
+        "id": "p92_warrant",
         "name": "P-92 WARRANT",
-        "name_cn": "P-92 WARRANT",
+        "name_cn": "P-92 逮捕令",
         "type": "secondary",
         "category": "secondary",
         "warbond": "force_of_law",
-        "desc": "P-92 WARRANT",
+        "desc": "P-92 逮捕令",
         "ammo_economy": 1,
         "control": 0,
         "danger": 1,
@@ -1691,8 +1691,8 @@ SECONDARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3.5, "fleshmob":1, "gatekeeper":0.5, "gazer":0.5, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0.5, "veracitor":1.5, "voteless":2.5, "warp_ship":0, "watcher":4.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "las_58_talon": {
-        "id": "las_58_talon",
+    "las58_talon": {
+        "id": "las58_talon",
         "name": "LAS-58 TALON",
         "name_cn": "LAS-58 猛爪",
         "type": "secondary",
@@ -1719,8 +1719,8 @@ SECONDARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2.5, "fleshmob":1, "gatekeeper":0.5, "gazer":1, "ground_ships_body":0, "ground_ships_shield":2, "harvester_body":0.5, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "stingray":2, "veracitor":1.5, "voteless":3, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "p_33_missile_pistol": {
-        "id": "p_33_missile_pistol",
+    "p33_missile_pistol": {
+        "id": "p33_missile_pistol",
         "name": "P-33 MISSILE PISTOL",
         "name_cn": "P-33 制导手枪",
         "type": "secondary",
@@ -1744,8 +1744,8 @@ SECONDARIES = {
         "enemy_scores_squids": {"broadcast_tower":4.5, "elevated_overseer":1, "fleshmob":2.5, "gatekeeper":3, "gazer":3, "ground_ships_body":3.5, "ground_ships_shield":0.5, "harvester_body":3.5, "harvester_shield":1, "leviathan":0, "lightning_spire":3, "monolith":0, "overseer":1.5, "research_station":0, "stingray":3.5, "veracitor":3, "voteless":1.5, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "p_11_stim_pistol": {
-        "id": "p_11_stim_pistol",
+    "p11_stim_pistol": {
+        "id": "p11_stim_pistol",
         "name": "P-11 STIM PISTOL",
         "name_cn": "P-11 治疗剂手枪",
         "type": "secondary",
@@ -1772,8 +1772,8 @@ SECONDARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":0, "fleshmob":0, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":0, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":0, "research_station":0, "stingray":0, "veracitor":0, "voteless":0, "warp_ship":0, "watcher":0},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "plas_15_loyalist": {
-        "id": "plas_15_loyalist",
+    "plas15_loyalist": {
+        "id": "plas15_loyalist",
         "name": "PLAS-15 LOYALIST",
         "name_cn": "PLAS-15 忠诚者",
         "type": "secondary",
@@ -1800,8 +1800,8 @@ SECONDARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3, "fleshmob":1, "gatekeeper":0, "gazer":0.5, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "stingray":1, "veracitor":1.5, "voteless":2.5, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "p_72_crisper": {
-        "id": "p_72_crisper",
+    "p72_crisper": {
+        "id": "p72_crisper",
         "name": "P-72 CRISPER",
         "name_cn": "P-72 迅击",
         "type": "secondary",
@@ -1853,8 +1853,8 @@ SECONDARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":1, "fleshmob":0.5, "gatekeeper":0, "gazer":1.5, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":1.5, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":2.5, "warp_ship":0, "watcher":1.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "p_69_veto": {
-        "id": "p_69_veto",
+    "p69_veto": {
+        "id": "p69_veto",
         "name": "P-69 VETO",
         "name_cn": "P-69 否决者",
         "type": "secondary",
@@ -1880,8 +1880,8 @@ SECONDARIES = {
         "enemy_scores_squids": {"ap_direct":3, "ap_extreme":0, "ap_large":3, "ap_slight":3, "base":105, "broadcast_tower":0, "calibre":12, "demolition":10, "drag":0, "durable":35, "elevated_overseer":1.5, "ergonomics":100, "fleshmob":0.5, "gatekeeper":0, "gazer":1, "gravity":0.3, "ground_ships_body":0, "ground_ships_shield":1.5, "harvester_body":0, "harvester_shield":2, "leviathan":0, "lightning_spire":0, "mags_spare":7.5, "mass":7, "monolith":0, "noise_range":33, "overseer":2, "penetration_slowdown":0.25, "push":15, "recoil_h":12.5, "recoil_v":47.5, "research_station":0, "spread_h":8, "spread_v":8, "stagger":35, "stingray":0.5, "sway":1, "tactical_reload":3, "units":1, "velocity":375, "veracitor":0.5, "voteless":1.5, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "cqc_19_stun_lance": {
-        "id": "cqc_19_stun_lance",
+    "cqc19_stun_lance": {
+        "id": "cqc19_stun_lance",
         "name": "CQC-19 STUN LANCE",
         "name_cn": "CQC-19 眩晕长矛",
         "type": "secondary",
@@ -1908,8 +1908,8 @@ SECONDARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":0, "fleshmob":0.5, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":0.5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":4, "warp_ship":0, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":True, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "cqc_2_sabre": {
-        "id": "cqc_2_sabre",
+    "cqc2_sabre": {
+        "id": "cqc2_sabre",
         "name": "CQC-2 SABRE",
         "name_cn": "CQC-2 军刀",
         "type": "secondary",
@@ -1933,8 +1933,8 @@ SECONDARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":0, "fleshmob":0.5, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":0.5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":4, "warp_ship":0, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":True, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "cqc_30_stun_baton": {
-        "id": "cqc_30_stun_baton",
+    "cqc30_stun_baton": {
+        "id": "cqc30_stun_baton",
         "name": "CQC-30 STUN BATON",
         "name_cn": "CQC-30 眩晕短棍",
         "type": "secondary",
@@ -1961,8 +1961,8 @@ SECONDARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":0, "fleshmob":0.5, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":0.5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":4, "warp_ship":0, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":True, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "cqc_5_combat_hatchet": {
-        "id": "cqc_5_combat_hatchet",
+    "cqc5_combat_hatchet": {
+        "id": "cqc5_combat_hatchet",
         "name": "CQC-5 COMBAT HATCHET",
         "name_cn": "CQC-5 战斗短柄斧",
         "type": "secondary",
@@ -1989,8 +1989,8 @@ SECONDARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":0, "fleshmob":0.5, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":0.5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":4, "warp_ship":0, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":True, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "cqc_42_machete": {
-        "id": "cqc_42_machete",
+    "cqc42_machete": {
+        "id": "cqc42_machete",
         "name": "CQC-42 MACHETE",
         "name_cn": "CQC-42 砍刀",
         "type": "secondary",
@@ -2017,8 +2017,8 @@ SECONDARIES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":0, "fleshmob":0.5, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":0.5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":4, "warp_ship":0, "watcher":0.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":True, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "cqc_73_entrenchment_tool": {
-        "id": "cqc_73_entrenchment_tool",
+    "cqc73_entrenchment_tool": {
+        "id": "cqc73_entrenchment_tool",
         "name": "CQC-73 ENTRENCHMENT TOOL",
         "name_cn": "CQC-73 堑壕工具",
         "type": "secondary",
@@ -2044,8 +2044,8 @@ SECONDARIES = {
 }
 
 GRENADES = {
-    "g_31_arc": {
-        "id": "g_31_arc",
+    "g31_arc": {
+        "id": "g31_arc",
         "name": "G-31 ARC",
         "name_cn": "G-31 电弧",
         "type": "grenade",
@@ -2070,8 +2070,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":2, "fleshmob":2, "gatekeeper":1, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":2, "voteless":4, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":True, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "g_6_frag": {
-        "id": "g_6_frag",
+    "g6_frag": {
+        "id": "g6_frag",
         "name": "G-6 FRAG",
         "name_cn": "G-6 破片弹",
         "type": "grenade",
@@ -2096,8 +2096,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":4, "elevated_overseer":1, "fleshmob":1, "gatekeeper":0, "gazer":3, "ground_ships_body":4, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":1.5, "voteless":5, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "g_12_high_explosive": {
-        "id": "g_12_high_explosive",
+    "g12_high_explosive": {
+        "id": "g12_high_explosive",
         "name": "G-12 HIGH EXPLOSIVE",
         "name_cn": "G-12 高爆弹",
         "type": "grenade",
@@ -2122,8 +2122,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":4, "elevated_overseer":2, "fleshmob":1, "gatekeeper":0.5, "gazer":4, "ground_ships_body":4, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":3, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":2, "voteless":5, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "g_10_incendiary": {
-        "id": "g_10_incendiary",
+    "g10_incendiary": {
+        "id": "g10_incendiary",
         "name": "G-10 INCENDIARY",
         "name_cn": "G-10 燃烧弹",
         "type": "grenade",
@@ -2147,8 +2147,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":4, "elevated_overseer":2, "fleshmob":2, "gatekeeper":1, "gazer":3.5, "ground_ships_body":4, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":3, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":2, "voteless":5, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":True, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "g_16_impact": {
-        "id": "g_16_impact",
+    "g16_impact": {
+        "id": "g16_impact",
         "name": "G-16 IMPACT",
         "name_cn": "G-16 冲击弹",
         "type": "grenade",
@@ -2172,8 +2172,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":4, "elevated_overseer":2, "fleshmob":1.5, "gatekeeper":1, "gazer":5, "ground_ships_body":4, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":5, "monolith":0, "overseer":4, "research_station":0, "stingray":0, "veracitor":2.5, "voteless":4, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "g_3_smoke": {
-        "id": "g_3_smoke",
+    "g3_smoke": {
+        "id": "g3_smoke",
         "name": "G-3 SMOKE",
         "name_cn": "G-3 烟雾弹",
         "type": "grenade",
@@ -2198,8 +2198,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":0, "fleshmob":0, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":0, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":0, "research_station":0, "stingray":0, "veracitor":0, "voteless":0, "warp_ship":0, "watcher":0},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "g_89_smokescreen": {
-        "id": "g_89_smokescreen",
+    "g89_smokescreen": {
+        "id": "g89_smokescreen",
         "name": "G-89 SMOKESCREEN",
         "name_cn": "G-89 烟幕",
         "type": "grenade",
@@ -2223,8 +2223,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":0, "fleshmob":0, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":0, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":0, "research_station":0, "stingray":0, "veracitor":0, "voteless":0, "warp_ship":0, "watcher":0},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "g_23_stun": {
-        "id": "g_23_stun",
+    "g23_stun": {
+        "id": "g23_stun",
         "name": "G-23 STUN",
         "name_cn": "G-23 眩晕弹",
         "type": "grenade",
@@ -2249,8 +2249,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":0, "fleshmob":0, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":3, "harvester_body":0, "harvester_shield":0, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":0, "research_station":0, "stingray":0, "veracitor":0, "voteless":0, "warp_ship":0, "watcher":0},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "g_123_thermite": {
-        "id": "g_123_thermite",
+    "g123_thermite": {
+        "id": "g123_thermite",
         "name": "G-123 THERMITE",
         "name_cn": "G-123 铝热弹",
         "type": "grenade",
@@ -2275,8 +2275,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":4, "elevated_overseer":0.5, "fleshmob":4, "gatekeeper":4, "gazer":4, "ground_ships_body":3, "ground_ships_shield":1, "harvester_body":4, "harvester_shield":1, "leviathan":0, "lightning_spire":2, "monolith":0, "overseer":0.5, "research_station":0, "stingray":0, "veracitor":4, "voteless":0.5, "warp_ship":0, "watcher":0},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":True, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "g_13_incendiary_impact": {
-        "id": "g_13_incendiary_impact",
+    "g13_incendiary_impact": {
+        "id": "g13_incendiary_impact",
         "name": "G-13 INCENDIARY IMPACT",
         "name_cn": "G-13 燃烧冲击弹",
         "type": "grenade",
@@ -2300,8 +2300,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":4, "elevated_overseer":2, "fleshmob":2, "gatekeeper":2, "gazer":4.5, "ground_ships_body":4, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":4, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":2.5, "voteless":4, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":True, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "g_4_gas_grenade": {
-        "id": "g_4_gas_grenade",
+    "g4_gas_grenade": {
+        "id": "g4_gas_grenade",
         "name": "G-4 GAS GRENADE",
         "name_cn": "G-4 毒气榴弹",
         "type": "grenade",
@@ -2326,8 +2326,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":4, "elevated_overseer":1, "fleshmob":1, "gatekeeper":1, "gazer":3, "ground_ships_body":4, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":0, "leviathan":0, "lightning_spire":3, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":1, "voteless":4, "warp_ship":0, "watcher":2},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":True, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "k_2_throwing_knife": {
-        "id": "k_2_throwing_knife",
+    "k2_throwing_knife": {
+        "id": "k2_throwing_knife",
         "name": "K-2 THROWING KNIFE",
         "name_cn": "K-2 飞刀",
         "type": "grenade",
@@ -2351,8 +2351,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":1, "fleshmob":0.5, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":0.5, "voteless":2, "warp_ship":0, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "g_50_seeker": {
-        "id": "g_50_seeker",
+    "g50_seeker": {
+        "id": "g50_seeker",
         "name": "G-50 SEEKER",
         "name_cn": "G-50 寻踪者",
         "type": "grenade",
@@ -2376,8 +2376,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":3, "fleshmob":1, "gatekeeper":1, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":1, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":2, "research_station":0, "stingray":0, "veracitor":1.5, "voteless":4.5, "warp_ship":0, "watcher":3},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "ted_63_dynamite": {
-        "id": "ted_63_dynamite",
+    "ted63_dynamite": {
+        "id": "ted63_dynamite",
         "name": "TED-63 DYNAMITE",
         "name_cn": "TED-63 炸药",
         "type": "grenade",
@@ -2402,8 +2402,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":4, "elevated_overseer":2, "fleshmob":1.5, "gatekeeper":1, "gazer":2.5, "ground_ships_body":4, "ground_ships_shield":1, "harvester_body":1, "harvester_shield":1, "leviathan":0, "lightning_spire":3, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":2, "voteless":4, "warp_ship":0, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "g_142_pyrotech": {
-        "id": "g_142_pyrotech",
+    "g142_pyrotech": {
+        "id": "g142_pyrotech",
         "name": "G-142 PYROTECH",
         "name_cn": "G-142 烟花术",
         "type": "grenade",
@@ -2428,8 +2428,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":4, "elevated_overseer":1, "fleshmob":2.5, "gatekeeper":2, "gazer":3.5, "ground_ships_body":4, "ground_ships_shield":0.5, "harvester_body":0, "harvester_shield":0.5, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":2, "voteless":5, "warp_ship":0, "watcher":1.5},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":True, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "g_109_urchin": {
-        "id": "g_109_urchin",
+    "g109_urchin": {
+        "id": "g109_urchin",
         "name": "G-109 URCHIN",
         "name_cn": "G-109 海胆",
         "type": "grenade",
@@ -2454,8 +2454,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":0, "fleshmob":0, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":3, "harvester_body":0, "harvester_shield":0, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":0, "research_station":0, "stingray":0, "veracitor":0, "voteless":0, "warp_ship":0, "watcher":0},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":True, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "g_7_pineapple": {
-        "id": "g_7_pineapple",
+    "g7_pineapple": {
+        "id": "g7_pineapple",
         "name": "G-7 PINEAPPLE",
         "name_cn": "G-7 菠萝",
         "type": "grenade",
@@ -2483,8 +2483,8 @@ GRENADES = {
         "enemy_scores_squids": {"ap_direct":3, "ap_extreme":0, "ap_large":0, "ap_slight":0, "base":100, "broadcast_tower":4, "buildup":0, "calibre":0, "demolition":20, "drag":0, "durable":100, "elevated_overseer":0.5, "ergonomics":0, "fall_off_100m":0, "fall_off_1m":0, "fall_off_25m":0, "fall_off_50m":0, "fleshmob":1, "gatekeeper":0.5, "gazer":0.5, "gravity":0, "ground_ships_body":4, "ground_ships_shield":0.5, "harvester_body":0, "harvester_shield":0.5, "inner_radius":2.5, "leviathan":0, "lightning_spire":0, "mags_spare":0, "mass":0, "monolith":0, "noise_range":0, "outer_radius":5, "overseer":1, "push":40, "recoil_h":0, "recoil_v":0, "research_station":0, "spread_h":0, "spread_v":0, "stagger":25, "stagger_radius":14, "stingray":0, "sway":0, "tactical_reload":0, "units":18, "velocity":0, "veracitor":1.5, "voteless":3.5, "warp_ship":0, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "tm_01_lure_mine": {
-        "id": "tm_01_lure_mine",
+    "tm01_lure_mine": {
+        "id": "tm01_lure_mine",
         "name": "TM-01 LURE MINE",
         "name_cn": "TM-01 诱饵地雷",
         "type": "grenade",
@@ -2508,8 +2508,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":3, "elevated_overseer":1, "fleshmob":3, "gatekeeper":2.5, "gazer":2, "ground_ships_body":0, "ground_ships_shield":1, "harvester_body":1, "harvester_shield":0, "leviathan":0, "lightning_spire":3, "monolith":0, "overseer":3, "research_station":0, "stingray":0, "veracitor":2.5, "voteless":3.5, "warp_ship":0, "watcher":1},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":True, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "gsh_39_shield": {
-        "id": "gsh_39_shield",
+    "gsh39_shield": {
+        "id": "gsh39_shield",
         "name": "G/SH-39 SHIELD",
         "name_cn": "G/SH-39 盾雷",
         "type": "grenade",
@@ -2533,8 +2533,8 @@ GRENADES = {
         "enemy_scores_squids": {"broadcast_tower":0, "elevated_overseer":0, "fleshmob":0, "gatekeeper":0, "gazer":0, "ground_ships_body":0, "ground_ships_shield":0, "harvester_body":0, "harvester_shield":0, "leviathan":0, "lightning_spire":0, "monolith":0, "overseer":0, "research_station":0, "stingray":0, "veracitor":0, "voteless":0, "warp_ship":0, "watcher":0},
         "flags": {"backpack":False, "bayonet":False, "disposable":False, "emplacement":False, "is_arc":False, "is_explosive":False, "is_fire":False, "is_gas":False, "mech":False, "melee":False, "mobility":False, "mobility_pack":False, "one_handed":False, "sentry":False, "support_weapon":False, "vehicle":False},
     },
-    "g_48_giga_grenade": {
-        "id": "g_48_giga_grenade",
+    "g48_giga_grenade": {
+        "id": "g48_giga_grenade",
         "name": "G-48 GIGA GRENADE",
         "name_cn": "G-48 千兆级榴弹",
         "type": "grenade",

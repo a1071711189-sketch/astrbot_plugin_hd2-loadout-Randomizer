@@ -214,7 +214,9 @@ class MyPlugin(Star):
         if sub in ("faction", "factions"):
             lines = ["── Factions ──"]
             for f in FACTIONS.values():
-                lines.append(f"  {f['emoji']} {f['name']} ({f['short']}) — {f['desc']}")
+                cn = f.get("name_cn", "")
+                sc = f.get("short_cn", "")
+                lines.append(f"  {f['emoji']} {f['name']} / {cn} ({sc})")
             return "\n".join(lines)
 
         elif sub in ("brigade", "brigades"):

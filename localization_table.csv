@@ -33,7 +33,7 @@ SG-225IE BREAKER INCENDIARY,SG-225IE 高燃“破裂者”,Primary,Steeled Veter
 P-4 SENATOR,P-4 参议员,Secondary,Steeled Veterans,铁血老兵
 FLEXIBLE REINFORCEMENT BUDGET,灵活增援预算,Booster,Steeled Veterans,铁血老兵
 AR-32 PACIFIER,AR-32 安抚者,Primary,Force Of Law,法律铁腕
-P-92 WARRANT,P-92 WARRANT,Secondary,Force Of Law,法律铁腕
+P-92 WARRANT,P-92 逮捕令,Secondary,Force Of Law,法律铁腕
 G-109 URCHIN,G-109 海胆,Grenade,Force Of Law,法律铁腕
 GL-52 DE-ESCALATOR,GL-52 缓和使者,Stratagem,Force Of Law,法律铁腕
 AX/ARC-3 K-9,电狗,Stratagem,Force Of Law,法律铁腕
@@ -247,7 +247,7 @@ MLS-4X COMMANDO,MLS-4X 突击兵,Stratagem,Stratagem,舰船
 AC-8 AUTOCANNON,AC-8 机炮,Stratagem,Stratagem,舰船
 FAF-14 SPEAR,FAF-14 飞矛,Stratagem,Stratagem,舰船
 GR-8 RECOILLESS RIFLE,GR-8 无后座力炮,Stratagem,Stratagem,舰船
-LIFT-850 JUMP PACK,LIFT-850 JUMP PACK,Stratagem,Stratagem,舰船
+LIFT-850 JUMP PACK,LIFT-850 喷射背包,Stratagem,Stratagem,舰船
 SH-20 BALLISTIC SHIELD BACKPACK,SH-20 防护罩生成包,Stratagem,Stratagem,舰船
 AX/LAS-5 ROVER,AX/LAS-5 漫游车,Stratagem,Stratagem,舰船
 M-102 FAST RECON VEHICLE,M-102 快速侦察载具,Stratagem,Stratagem,舰船

@@ -1,4 +1,4 @@
-"""Auto-generated from game_data.json + localization_table.csv"""
+"""Auto-generated"""
 
 BOOSTERS = {
     "concealed_insertion": {
