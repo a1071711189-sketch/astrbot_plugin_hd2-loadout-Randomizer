@@ -327,62 +327,91 @@ class MyPlugin(Star):
 
     def _handle_preset(self, args: list, event) -> str:
         if not args:
-            return "Usage: /loadout preset <set|show|clear> [options]"
+            return "Usage: /loadout preset <set|show|clear> [名单]"
 
         user_id = event.get_sender_id()
         sub = args[0].lower()
 
         if sub == "set":
-            # Parse options: --no-warbond ids, --lock slot:id, --no item_ids
+            rest = args[1:]
+            has_flags = any(p.startswith("--") for p in rest)
             preset = load_preset(user_id)
-            i = 1
-            current = None
-            while i < len(args):
-                part = args[i]
-                if part == "--no-warbond":
-                    current = "no_wb"
-                    i += 1
-                elif part == "--lock":
-                    current = "lock"
-                    i += 1
-                elif part == "--no":
-                    current = "no"
-                    i += 1
-                elif current == "no_wb":
-                    raw = " ".join(args[i:]).strip().strip('"').strip("'")
-                    preset["exclude_warbond_ids"] = []
-                    for wname in raw.split(","):
-                        matched = self._match_warbond(wname.strip())
-                        if matched:
-                            preset["exclude_warbond_ids"].append(matched)
-                    break
-                elif current == "lock":
-                    for pair in args[i].split():
-                        if ":" in pair:
-                            slot, item_id = pair.split(":", 1)
-                            preset.setdefault("locked_slots", {})[slot.strip()] = item_id.strip()
-                    i += 1
-                elif current == "no":
-                    raw = " ".join(args[i:]).strip().strip('"').strip("'")
-                    preset["exclude_items"] = [x.strip() for x in raw.split(",") if x.strip()]
-                    break
-                else:
-                    i += 1
+
+            if has_flags:
+                # 旧方式：--no-warbond / --no / --lock
+                i = 0
+                current = None
+                while i < len(rest):
+                    part = rest[i]
+                    if part == "--no-warbond":
+                        current = "no_wb"; i += 1
+                    elif part == "--lock":
+                        current = "lock"; i += 1
+                    elif part == "--no":
+                        current = "no"; i += 1
+                    elif current == "no_wb":
+                        raw = " ".join(rest[i:]).strip().strip('"').strip("'")
+                        preset["exclude_warbond_ids"] = []
+                        for wname in raw.split(","):
+                            matched = self._match_warbond(wname.strip())
+                            if matched:
+                                preset["exclude_warbond_ids"].append(matched)
+                        break
+                    elif current == "lock":
+                        for pair in rest[i].split():
+                            if ":" in pair:
+                                slot, item_id = pair.split(":", 1)
+                                preset.setdefault("locked_slots", {})[slot.strip()] = item_id.strip()
+                        i += 1
+                    elif current == "no":
+                        raw = " ".join(rest[i:]).strip().strip('"').strip("'")
+                        preset["exclude_items"] = [x.strip() for x in raw.split(",") if x.strip()]
+                        break
+                    else:
+                        i += 1
+            else:
+                # 智能模式：自动分类空格分隔的中文名 → 债券或物品
+                # 先按空格拆分（中文名通常不含空格，除了带引号的）
+                tokens = " ".join(rest).split()
+                wb_ids = []
+                item_ids = []
+                unmatched = []
+                for token in tokens:
+                    wid = self._match_warbond(token)
+                    if wid:
+                        wb_ids.append(wid)
+                        continue
+                    item_id = self._match_item(token)
+                    if item_id:
+                        item_ids.append(item_id)
+                        continue
+                    unmatched.append(token)
+                if wb_ids:
+                    preset["exclude_warbond_ids"] = list(set(wb_ids))
+                if item_ids:
+                    preset["exclude_items"] = list(set(item_ids))
+                if unmatched:
+                    return "未识别: {}".format(", ".join(unmatched))
+
             save_preset(user_id, preset)
-            lines = ["Preset saved:"]
+            lines = ["预设已保存:"]
             if preset.get("exclude_warbond_ids"):
-                wb_names = []
+                names = []
                 for wid in preset["exclude_warbond_ids"]:
                     wb = WARBONDS.get(wid, {})
-                    cn = wb.get("name_cn", wid)
-                    wb_names.append(cn)
-                lines.append(f"  排除债券: {', '.join(wb_names)}")
+                    names.append(wb.get("name_cn", wid))
+                lines.append("  排除债券: {}".format(", ".join(names)))
             if preset.get("exclude_items"):
-                lines.append(f"  排除物品: {', '.join(preset['exclude_items'])}")
+                names = []
+                for iid in preset["exclude_items"]:
+                    item = self._find_item(iid)
+                    if item:
+                        names.append(item.get("name_cn", iid))
+                    else:
+                        names.append(iid)
+                lines.append("  排除物品: {}".format(", ".join(names)))
             if preset.get("locked_slots"):
-                lines.append(f"  锁定槽位: {preset['locked_slots']}")
-            if len(lines) == 1:
-                lines.append("  (空预设，使用 --no-warbond / --lock / --no 添加)")
+                lines.append("  锁定: {}".format(preset["locked_slots"]))
             return "\n".join(lines)
 
         elif sub == "show":
@@ -398,7 +427,11 @@ class MyPlugin(Star):
                     wb_names.append(cn)
                 lines.append(f"  排除债券: {', '.join(wb_names)}")
             if preset.get("exclude_items"):
-                lines.append(f"  排除物品: {', '.join(preset['exclude_items'])}")
+                item_names = []
+                for iid in preset["exclude_items"]:
+                    item = self._find_item(iid)
+                    item_names.append(item.get("name_cn", iid) if item else iid)
+                lines.append("  排除物品: {}".format(", ".join(item_names)))
             if preset.get("locked_slots"):
                 lines.append(f"  锁定槽位: {preset['locked_slots']}")
             return "\n".join(lines)
@@ -477,6 +510,30 @@ class MyPlugin(Star):
             if wid.lower().startswith(wname_lower) or wname_lower.startswith(wid.lower()):
                 return wid
         return ""
+
+    def _match_item(self, name: str) -> str:
+        """通过中文名/英文名/ID 匹配物品，返回 item id"""
+        name_lower = name.lower().strip()
+        for pool in [PRIMARIES, SECONDARIES, GRENADES, STRATAGEMS, ARMORS, BOOSTERS]:
+            for iid, item in pool.items():
+                if name_lower == iid.lower():
+                    return iid
+                if name_lower == item.get("name_cn", "").lower():
+                    return iid
+                if name_lower == item["name"].lower():
+                    return iid
+                # 模糊: 输入是物品中文名的一部分
+                cn = item.get("name_cn", "")
+                if len(name_lower) >= 3 and name_lower in cn.lower():
+                    return iid
+        return ""
+
+    def _find_item(self, iid: str):
+        """根据 id 找物品 dict"""
+        for pool in [PRIMARIES, SECONDARIES, GRENADES, STRATAGEMS, ARMORS, BOOSTERS]:
+            if iid in pool:
+                return pool[iid]
+        return None
 
     async def terminate(self):
         """可选择实现异步的插件销毁方法，当插件被卸载/停用时会调用。"""
