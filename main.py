@@ -71,7 +71,7 @@ class MyPlugin(Star):
         except ValueError:
             args_str = ""
 
-        logger.debug(f"[HD2] user={user_id} args={repr(args_str)}")
+        logger.info("[HD2] user={} args={}".format(user_id, repr(args_str)))
 
         if not args_str or args_str.lower() in ("random", ""):
             user_id = event.get_sender_id()
@@ -214,7 +214,9 @@ class MyPlugin(Star):
         # 加载用户预设（命令行参数优先）
         user_id = event.get_sender_id()
         preset = apply_preset(user_id)
-        logger.debug(f"[HD2] user={user_id} preset={preset} | cmd: faction={faction_id} warbond={warbond_ids} exclude_wb={exclude_warbond_ids} exclude_items={exclude_items} lock={locked_slots} mode={mode}")
+        logger.info("[HD2] user={} faction={} warbond={} exclude_wb={} exclude_items={} lock={} mode={} preset={}".format(
+            user_id, faction_id, warbond_ids, exclude_warbond_ids, exclude_items,
+            locked_slots, mode, preset))
         if preset.get("exclude_warbond_ids") and not exclude_warbond_ids:
             exclude_warbond_ids = preset["exclude_warbond_ids"]
         elif preset.get("exclude_warbond_ids") and exclude_warbond_ids:
@@ -238,7 +240,8 @@ class MyPlugin(Star):
             mode=mode,
         )
 
-        logger.debug(f"[HD2] result: faction={result.faction_id} case={result.case_name} power={result.power_score}")
+        logger.info("[HD2] result: faction={} case={} power={:.1f}".format(
+            result.faction_id, result.case_name, result.power_score))
         yield event.plain_result(result.format_for_chat())
 
     @filter.command("helloworld")
@@ -457,6 +460,7 @@ class MyPlugin(Star):
 
     def _match_warbond(self, wname: str) -> str:
         wname_lower = wname.lower().strip()
+        # 精确匹配
         for wid, wdata in WARBONDS.items():
             if wname_lower == wdata["name"].lower():
                 return wid
@@ -464,10 +468,13 @@ class MyPlugin(Star):
                 return wid
             if wname_lower == wid.lower():
                 return wid
+        # 模糊匹配: 输入包含在名称中，或名称包含在输入中
         for wid, wdata in WARBONDS.items():
-            if wname_lower in wdata["name"].lower():
+            target = (wdata["name"] + " " + wdata.get("name_cn", "")).lower()
+            if wname_lower in target or (len(wname_lower) >= 5 and target in wname_lower):
                 return wid
-            if wname_lower in wdata.get("name_cn", "").lower():
+            # 容忍拼写差一个字符
+            if wid.lower().startswith(wname_lower) or wname_lower.startswith(wid.lower()):
                 return wid
         return ""
 
