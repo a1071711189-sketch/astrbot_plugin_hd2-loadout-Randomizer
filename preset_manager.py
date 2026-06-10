@@ -54,6 +54,7 @@ def init_preset_dir(context):
 
 
 def _ensure_dir():
+    global _presets_dir
     if _presets_dir is None:
         _presets_dir = Path(__file__).parent / "data" / "plugin_data"
     _presets_dir.mkdir(parents=True, exist_ok=True)
