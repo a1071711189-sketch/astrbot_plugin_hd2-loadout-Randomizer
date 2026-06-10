@@ -4,6 +4,7 @@ from astrbot.api import logger
 from astrbot.api.message_components import *
 
 from .randomizer import LoadoutRandomizer
+from .preset_manager import load_preset, save_preset, delete_preset, apply_preset
 from .data.factions import FACTIONS, BRIGADES, get_brigades_for_faction
 from .data.warbonds import WARBONDS
 from .data.weapons import PRIMARIES, SECONDARIES, GRENADES
@@ -27,6 +28,12 @@ Options (add after faction):
   --no-warbond base_game,superstore           Exclude these bonds from pool
   --no sg_451_cookout,flam_40_flamethrower    Exclude specific items by ID
   --mode optimized                            Auto-optimize synergy
+
+Preset (per-user saved filters):
+  /loadout preset set --no-warbond exo_experts
+  /loadout preset set --lock primary:scorcher
+  /loadout preset show
+  /loadout preset clear
 
 Details:
   /loadout details warbond freedoms_flame     Show all items in a warbond
@@ -53,6 +60,8 @@ class MyPlugin(Star):
     async def loadout_command(self, event: AstrMessageEvent):
         """Helldivers 2 随机负载构建器 - 主指令"""
         message_str = event.message_str.strip()
+        user_id = event.get_sender_id()
+        logger.info(f"[HD2] user={user_id} raw_msg={message_str}")
         # 移除指令前缀和命令词
         parts_all = message_str.split()
         # 找到 "loadout" 的位置，取其后内容
@@ -62,8 +71,19 @@ class MyPlugin(Star):
         except ValueError:
             args_str = ""
 
+        logger.debug(f"[HD2] user={user_id} args={repr(args_str)}")
+
         if not args_str or args_str.lower() in ("random", ""):
-            result = self.randomizer.randomize(faction_id="random")
+            user_id = event.get_sender_id()
+            preset = apply_preset(user_id)
+            logger.debug(f"[HD2] user={user_id} no-args roll, preset={preset}")
+            result = self.randomizer.randomize(
+                faction_id="random",
+                exclude_warbond_ids=preset.get("exclude_warbond_ids"),
+                exclude_items=preset.get("exclude_items"),
+                locked_slots=preset.get("locked_slots"),
+            )
+            logger.debug(f"[HD2] no-args result: faction={result.faction_id} case={result.case_name} power={result.power_score}")
             yield event.plain_result(result.format_for_chat())
             return
 
@@ -84,6 +104,11 @@ class MyPlugin(Star):
         # 详情命令
         if first == "details":
             yield event.plain_result(self._handle_details(parts[1:]))
+            return
+
+        # 预设命令
+        if first == "preset":
+            yield event.plain_result(self._handle_preset(parts[1:], event))
             return
 
         # 解析参数
@@ -186,6 +211,23 @@ class MyPlugin(Star):
         if exclude_warbond_ids is not None and len(exclude_warbond_ids) == 0:
             exclude_warbond_ids = None
 
+        # 加载用户预设（命令行参数优先）
+        user_id = event.get_sender_id()
+        preset = apply_preset(user_id)
+        logger.debug(f"[HD2] user={user_id} preset={preset} | cmd: faction={faction_id} warbond={warbond_ids} exclude_wb={exclude_warbond_ids} exclude_items={exclude_items} lock={locked_slots} mode={mode}")
+        if preset.get("exclude_warbond_ids") and not exclude_warbond_ids:
+            exclude_warbond_ids = preset["exclude_warbond_ids"]
+        elif preset.get("exclude_warbond_ids") and exclude_warbond_ids:
+            exclude_warbond_ids = list(set(exclude_warbond_ids) | set(preset["exclude_warbond_ids"]))
+        if preset.get("exclude_items") and not exclude_items:
+            exclude_items = preset["exclude_items"]
+        if preset.get("locked_slots") and not locked_slots:
+            locked_slots = preset["locked_slots"]
+        elif preset.get("locked_slots") and locked_slots:
+            for k, v in preset["locked_slots"].items():
+                if k not in locked_slots:
+                    locked_slots[k] = v
+
         result = self.randomizer.randomize(
             faction_id=faction_id,
             brigade_id=brigade_id,
@@ -196,6 +238,7 @@ class MyPlugin(Star):
             mode=mode,
         )
 
+        logger.debug(f"[HD2] result: faction={result.faction_id} case={result.case_name} power={result.power_score}")
         yield event.plain_result(result.format_for_chat())
 
     @filter.command("helloworld")
@@ -278,6 +321,90 @@ class MyPlugin(Star):
             return "\n".join(lines)
 
         return f"Unknown list type: {sub}"
+
+    def _handle_preset(self, args: list, event) -> str:
+        if not args:
+            return "Usage: /loadout preset <set|show|clear> [options]"
+
+        user_id = event.get_sender_id()
+        sub = args[0].lower()
+
+        if sub == "set":
+            # Parse options: --no-warbond ids, --lock slot:id, --no item_ids
+            preset = load_preset(user_id)
+            i = 1
+            current = None
+            while i < len(args):
+                part = args[i]
+                if part == "--no-warbond":
+                    current = "no_wb"
+                    i += 1
+                elif part == "--lock":
+                    current = "lock"
+                    i += 1
+                elif part == "--no":
+                    current = "no"
+                    i += 1
+                elif current == "no_wb":
+                    raw = " ".join(args[i:]).strip().strip('"').strip("'")
+                    preset["exclude_warbond_ids"] = []
+                    for wname in raw.split(","):
+                        matched = self._match_warbond(wname.strip())
+                        if matched:
+                            preset["exclude_warbond_ids"].append(matched)
+                    break
+                elif current == "lock":
+                    for pair in args[i].split():
+                        if ":" in pair:
+                            slot, item_id = pair.split(":", 1)
+                            preset.setdefault("locked_slots", {})[slot.strip()] = item_id.strip()
+                    i += 1
+                elif current == "no":
+                    raw = " ".join(args[i:]).strip().strip('"').strip("'")
+                    preset["exclude_items"] = [x.strip() for x in raw.split(",") if x.strip()]
+                    break
+                else:
+                    i += 1
+            save_preset(user_id, preset)
+            lines = ["Preset saved:"]
+            if preset.get("exclude_warbond_ids"):
+                wb_names = []
+                for wid in preset["exclude_warbond_ids"]:
+                    wb = WARBONDS.get(wid, {})
+                    cn = wb.get("name_cn", wid)
+                    wb_names.append(cn)
+                lines.append(f"  排除债券: {', '.join(wb_names)}")
+            if preset.get("exclude_items"):
+                lines.append(f"  排除物品: {', '.join(preset['exclude_items'])}")
+            if preset.get("locked_slots"):
+                lines.append(f"  锁定槽位: {preset['locked_slots']}")
+            if len(lines) == 1:
+                lines.append("  (空预设，使用 --no-warbond / --lock / --no 添加)")
+            return "\n".join(lines)
+
+        elif sub == "show":
+            preset = load_preset(user_id)
+            if not preset:
+                return "你还没有保存预设。\n使用 /loadout preset set --no-warbond <债券> 来创建。"
+            lines = ["你的预设:"]
+            if preset.get("exclude_warbond_ids"):
+                wb_names = []
+                for wid in preset["exclude_warbond_ids"]:
+                    wb = WARBONDS.get(wid, {})
+                    cn = wb.get("name_cn", wid)
+                    wb_names.append(cn)
+                lines.append(f"  排除债券: {', '.join(wb_names)}")
+            if preset.get("exclude_items"):
+                lines.append(f"  排除物品: {', '.join(preset['exclude_items'])}")
+            if preset.get("locked_slots"):
+                lines.append(f"  锁定槽位: {preset['locked_slots']}")
+            return "\n".join(lines)
+
+        elif sub == "clear":
+            delete_preset(user_id)
+            return "预设已清除。"
+
+        return f"Unknown preset action: {sub}"
 
     def _handle_details(self, args: list) -> str:
         if not args:
