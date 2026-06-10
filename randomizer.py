@@ -141,7 +141,8 @@ class LoadoutRandomizer:
         # Step 1: 确定派系
         faction = self._resolve_faction(faction_id)
         result.faction_id = faction["id"]
-        result.faction_name = faction.get("name_cn", faction["name"])
+        result.faction_name = faction["name"]
+        result.faction_name_cn = faction.get("name_cn", faction["name"])
         result.faction_emoji = faction["emoji"]
 
         # Step 2: 确定 Case
@@ -151,23 +152,17 @@ class LoadoutRandomizer:
                 case_name = self._random_case(faction)
         else:
             case_name = self._random_case(faction)
-        result.case_name = case_name
 
-        # Map DH case name to Chinese if available
+        # Map DH case name to Chinese
         case_cn = case_name
+        brigade_cn = case_name
         for b in BRIGADES.values():
             if b.get("name", "").upper() == case_name.upper():
                 case_cn = b.get("name_cn", case_name)
-                break
+                if b.get("faction") == faction["id"]:
+                    brigade_cn = b.get("name_cn", case_name)
         result.case_name = case_cn
-
-        # 查找中文Case名
-        for b in BRIGADES.values():
-            if b.get("faction") == result.faction_id and b.get("name") == case_name:
-                result.brigade_name_cn = b.get("name_cn", case_name)
-                break
-        if not result.brigade_name_cn:
-            result.brigade_name_cn = case_name
+        result.brigade_name_cn = brigade_cn
 
         # Step 3: 获取派系战斗数据
         faction_data = self.game_data.get(faction["short"].lower(), {})
