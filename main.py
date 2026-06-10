@@ -120,12 +120,19 @@ class MyPlugin(Star):
         exclude_items = None
         mode = "random"
 
-        # 派系识别
+        # 派系识别（全面别名）
         faction_aliases = {
-            "bugs": "terminids", "bug": "terminids", "terminids": "terminids", "🐛": "terminids",
-            "bots": "automatons", "bot": "automatons", "automatons": "automatons", "🤖": "automatons",
-            "squids": "illuminate", "squid": "illuminate", "illuminate": "illuminate", "🦑": "illuminate",
-            "random": "random",
+            # Bugs
+            "bugs": "terminids", "bug": "terminids", "terminids": "terminids",
+            "虫": "terminids", "虫族": "terminids", "虫子": "terminids", "终结族": "terminids",
+            # Bots
+            "bots": "automatons", "bot": "automatons", "automatons": "automatons",
+            "机器人": "automatons", "机": "automatons",
+            # Squids
+            "squids": "illuminate", "squid": "illuminate", "illuminate": "illuminate",
+            "鱿鱼": "illuminate", "鱿": "illuminate", "光能": "illuminate", "光能者": "illuminate", "光能族": "illuminate",
+            # Random
+            "random": "random", "随": "random", "随机": "random",
         }
 
         i = 0
@@ -141,10 +148,50 @@ class MyPlugin(Star):
                     for word in bdata.get("short", "").lower().split():
                         brigade_aliases[word] = bid
                     brigade_aliases[bid] = bid
+                    # 也支持排的 name（如 NORMAL）和 name_cn（如 标准）
+                    brigade_aliases[bdata.get("name", "").lower()] = bid
+                    if bdata.get("name_cn"):
+                        brigade_aliases[bdata["name_cn"].lower()] = bid
+            # 额外通用别名 + 简写
+            extra = {
+                "standard": "standard_" + faction_id, "normal": "standard_" + faction_id,
+                "标准": "standard_" + faction_id, "普通": "standard_" + faction_id,
+                # 虫子
+                "掠食": "predator_strain", "predator": "predator_strain",
+                "爆裂": "bile_spewers", "胆汁": "bile_spewers", "rupture": "bile_spewers",
+                "重甲": "charger_heavy", "heavy": "charger_heavy",
+                "孢裂": "nursing_spewers", "孢子": "nursing_spewers", "spore": "nursing_spewers",
+                # 机器人
+                "喷气": "jet_brigade", "jet": "jet_brigade",
+                "燃烧": "incineration_corps", "incineration": "incineration_corps", "火": "incineration_corps",
+                "重装": "heavy_devastators", "毁灭": "heavy_devastators", "devastator": "heavy_devastators",
+                "赛博": "gunship_strider", "cyborg": "gunship_strider", "炮艇": "gunship_strider", "gunship": "gunship_strider",
+                # 鱿鱼
+                "无票": "voteless_horde", "voteless": "voteless_horde", "潮": "voteless_horde",
+                "飞行": "elevated_overseers", "overseer": "elevated_overseers", "占领": "elevated_overseers",
+                "收割": "harvester_heavy", "harvester": "harvester_heavy",
+            }
+            for k, v in extra.items():
+                if v in BRIGADES:
+                    brigade_aliases[k] = v
 
             if i < len(parts) and parts[i].lower() in brigade_aliases:
                 brigade_id = brigade_aliases[parts[i].lower()]
                 i += 1
+            elif i < len(parts):
+                # 模糊匹配 brigade: 输入包含在 name_cn 或 short 中
+                token = parts[i].lower()
+                for bid, bdata in BRIGADES.items():
+                    if bdata["faction"] != faction_id:
+                        continue
+                    targets = [bdata.get("name_cn", "").lower(), bdata.get("short", "").lower()]
+                    for t in targets:
+                        if t and len(token) >= 2 and token in t:
+                            brigade_id = bid
+                            i += 1
+                            break
+                    if brigade_id:
+                        break
 
         # 解析选项参数
         current_option = None
@@ -506,13 +553,19 @@ class MyPlugin(Star):
                 return wid
             if wid.lower().startswith(wname_lower) or wname_lower.startswith(wid.lower()):
                 return wid
-            # 中文: 重合字符 >= min(输入长, 名长) * 0.7
-            cn = wdata.get("name_cn", "")
-            if cn and len(wname_lower) >= 2 and len(cn) >= 2:
-                common = sum(1 for c in wname_lower if c in cn)
-                threshold = min(len(wname_lower), len(cn)) * 0.6
-                if common >= threshold:
-                    return wid
+            # 中文: 取重合度最高的
+            best_match = None
+            best_score = 0
+            for wid, wdata in WARBONDS.items():
+                cn = wdata.get("name_cn", "")
+                if cn and len(wname_lower) >= 2 and len(cn) >= 2:
+                    common = sum(1 for c in wname_lower if c in cn)
+                    threshold = min(len(wname_lower), len(cn)) * 0.6
+                    if common >= threshold and common > best_score:
+                        best_score = common
+                        best_match = wid
+            if best_match:
+                return best_match
         return ""
 
     def _match_item(self, name: str) -> str:
@@ -528,18 +581,20 @@ class MyPlugin(Star):
                     return iid
                 if name_lower == item["name"].lower():
                     return iid
-        # 模糊匹配
+        # 中文重合度取最佳
+        best_match = None
+        best_score = 0
         for pool in pools:
             for iid, item in pool.items():
                 cn = item.get("name_cn", "")
-                if len(name_lower) >= 3 and name_lower in cn.lower():
-                    return iid
-                # 中文重合度
                 if cn and len(name_lower) >= 2 and len(cn) >= 2:
                     common = sum(1 for c in name_lower if c in cn)
                     threshold = min(len(name_lower), len(cn)) * 0.6
-                    if common >= threshold:
-                        return iid
+                    if common >= threshold and common > best_score:
+                        best_score = common
+                        best_match = iid
+        if best_match:
+            return best_match
         return ""
 
     def _find_item(self, iid: str):
