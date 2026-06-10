@@ -37,12 +37,7 @@ Other:
   /loadout list weapons
   /loadout help
 """
-  /loadout list factions
-  /loadout list brigades bugs
-  /loadout list warbonds
-  /loadout list weapons primary
-  /loadout help
-"""
+
 
 
 @register("helloworld", "HD2 Loadout Builder", "Helldivers 2 随机负载构建器", "1.0.0")
