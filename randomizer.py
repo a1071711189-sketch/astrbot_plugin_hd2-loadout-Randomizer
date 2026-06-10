@@ -15,8 +15,11 @@ Helldivers 2 Loadout Randomizer - Core Engine v2
 """
 
 import random
+import logging
 from typing import Optional
 from pathlib import Path
+
+_log = logging.getLogger(__name__)
 
 from .data.factions import FACTIONS, BRIGADES, get_brigade, get_brigades_for_faction, get_faction
 from .data.weapons import PRIMARIES, SECONDARIES, GRENADES
@@ -158,6 +161,7 @@ class LoadoutRandomizer:
         result.faction_name = faction["name"]
         result.faction_name_cn = faction.get("name_cn", faction["name"])
         result.faction_emoji = faction["emoji"]
+        _log.debug("Selected faction: %s (%s)", faction["name"], faction.get("name_cn", ""))
 
         # Step 2: 确定 Case
         if brigade_id and brigade_id != "random":
@@ -217,6 +221,10 @@ class LoadoutRandomizer:
             all_armors = [a for a in all_armors if a["id"] not in exclude_ids]
             all_boosters = [b for b in all_boosters if b["id"] not in exclude_ids]
 
+        _log.debug("Pools after filtering: P=%d S=%d G=%d Str=%d Arm=%d B=%d",
+                    len(all_primaries), len(all_secondaries), len(all_grenades),
+                    len(all_stratagems), len(all_armors), len(all_boosters))
+
         # Score function using real calc engine
         faction_key = faction["short"].lower()  # "bugs", "bots", "squids"
         def power_score(item):
@@ -265,7 +273,9 @@ class LoadoutRandomizer:
         all_items = [result.primary, result.secondary, result.grenade,
                      result.armor, result.booster] + result.stratagems
         all_items = [i for i in all_items if i]
-        total_power = sum(power_score(i) for i in all_items)
+        scores = {i["name"]: power_score(i) for i in all_items}
+        total_power = sum(scores.values())
+        _log.debug("Selected: %s", {k: round(v, 1) for k, v in scores.items()})
         result.power_score = round(total_power, 1)
 
         return result

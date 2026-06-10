@@ -4,6 +4,7 @@ from astrbot.api import logger
 from astrbot.api.message_components import *
 
 from .randomizer import LoadoutRandomizer
+from .preset_manager import load_preset, save_preset, delete_preset, apply_preset
 from .data.factions import FACTIONS, BRIGADES, get_brigades_for_faction
 from .data.warbonds import WARBONDS
 from .data.weapons import PRIMARIES, SECONDARIES, GRENADES
@@ -27,6 +28,13 @@ Options (add after faction):
   --no-warbond base_game,superstore           Exclude these bonds from pool
   --no sg_451_cookout,flam_40_flamethrower    Exclude specific items by ID
   --mode optimized                            Auto-optimize synergy
+
+Preset (per-user saved filters):
+  /loadout preset set 焦土 遥遥领先 ...       (覆盖保存)
+  /loadout preset add 极地爱国者 军刀 ...     (追加到已有预设)
+  /loadout preset remove 遥遥领先 焦土 ...   (从预设中移除)
+  /loadout preset show
+  /loadout preset clear
 
 Details:
   /loadout details warbond freedoms_flame     Show all items in a warbond
@@ -53,6 +61,8 @@ class MyPlugin(Star):
     async def loadout_command(self, event: AstrMessageEvent):
         """Helldivers 2 随机负载构建器 - 主指令"""
         message_str = event.message_str.strip()
+        user_id = event.get_sender_id()
+        logger.info(f"[HD2] user={user_id} raw_msg={message_str}")
         # 移除指令前缀和命令词
         parts_all = message_str.split()
         # 找到 "loadout" 的位置，取其后内容
@@ -62,8 +72,19 @@ class MyPlugin(Star):
         except ValueError:
             args_str = ""
 
+        logger.info("[HD2] user={} args={}".format(user_id, repr(args_str)))
+
         if not args_str or args_str.lower() in ("random", ""):
-            result = self.randomizer.randomize(faction_id="random")
+            user_id = event.get_sender_id()
+            preset = apply_preset(user_id)
+            logger.debug(f"[HD2] user={user_id} no-args roll, preset={preset}")
+            result = self.randomizer.randomize(
+                faction_id="random",
+                exclude_warbond_ids=preset.get("exclude_warbond_ids"),
+                exclude_items=preset.get("exclude_items"),
+                locked_slots=preset.get("locked_slots"),
+            )
+            logger.debug(f"[HD2] no-args result: faction={result.faction_id} case={result.case_name} power={result.power_score}")
             yield event.plain_result(result.format_for_chat())
             return
 
@@ -86,6 +107,11 @@ class MyPlugin(Star):
             yield event.plain_result(self._handle_details(parts[1:]))
             return
 
+        # 预设命令
+        if first == "preset":
+            yield event.plain_result(self._handle_preset(parts[1:], event))
+            return
+
         # 解析参数
         faction_id = None
         brigade_id = None
@@ -95,12 +121,19 @@ class MyPlugin(Star):
         exclude_items = None
         mode = "random"
 
-        # 派系识别
+        # 派系识别（全面别名）
         faction_aliases = {
-            "bugs": "terminids", "bug": "terminids", "terminids": "terminids", "🐛": "terminids",
-            "bots": "automatons", "bot": "automatons", "automatons": "automatons", "🤖": "automatons",
-            "squids": "illuminate", "squid": "illuminate", "illuminate": "illuminate", "🦑": "illuminate",
-            "random": "random",
+            # Bugs
+            "bugs": "terminids", "bug": "terminids", "terminids": "terminids",
+            "虫": "terminids", "虫族": "terminids", "虫子": "terminids", "终结族": "terminids",
+            # Bots
+            "bots": "automatons", "bot": "automatons", "automatons": "automatons",
+            "机器人": "automatons", "机": "automatons",
+            # Squids
+            "squids": "illuminate", "squid": "illuminate", "illuminate": "illuminate",
+            "鱿鱼": "illuminate", "鱿": "illuminate", "光能": "illuminate", "光能者": "illuminate", "光能族": "illuminate",
+            # Random
+            "random": "random", "随": "random", "随机": "random",
         }
 
         i = 0
@@ -116,10 +149,50 @@ class MyPlugin(Star):
                     for word in bdata.get("short", "").lower().split():
                         brigade_aliases[word] = bid
                     brigade_aliases[bid] = bid
+                    # 也支持排的 name（如 NORMAL）和 name_cn（如 标准）
+                    brigade_aliases[bdata.get("name", "").lower()] = bid
+                    if bdata.get("name_cn"):
+                        brigade_aliases[bdata["name_cn"].lower()] = bid
+            # 额外通用别名 + 简写
+            extra = {
+                "standard": "standard_" + faction_id, "normal": "standard_" + faction_id,
+                "标准": "standard_" + faction_id, "普通": "standard_" + faction_id,
+                # 虫子
+                "掠食": "predator_strain", "predator": "predator_strain",
+                "爆裂": "bile_spewers", "胆汁": "bile_spewers", "rupture": "bile_spewers",
+                "重甲": "charger_heavy", "heavy": "charger_heavy",
+                "孢裂": "nursing_spewers", "孢子": "nursing_spewers", "spore": "nursing_spewers",
+                # 机器人
+                "喷气": "jet_brigade", "jet": "jet_brigade",
+                "燃烧": "incineration_corps", "incineration": "incineration_corps", "火": "incineration_corps",
+                "重装": "heavy_devastators", "毁灭": "heavy_devastators", "devastator": "heavy_devastators",
+                "赛博": "gunship_strider", "cyborg": "gunship_strider", "炮艇": "gunship_strider", "gunship": "gunship_strider",
+                # 鱿鱼
+                "无票": "voteless_horde", "voteless": "voteless_horde", "潮": "voteless_horde",
+                "飞行": "elevated_overseers", "overseer": "elevated_overseers", "占领": "elevated_overseers",
+                "收割": "harvester_heavy", "harvester": "harvester_heavy",
+            }
+            for k, v in extra.items():
+                if v in BRIGADES:
+                    brigade_aliases[k] = v
 
             if i < len(parts) and parts[i].lower() in brigade_aliases:
                 brigade_id = brigade_aliases[parts[i].lower()]
                 i += 1
+            elif i < len(parts):
+                # 模糊匹配 brigade: 输入包含在 name_cn 或 short 中
+                token = parts[i].lower()
+                for bid, bdata in BRIGADES.items():
+                    if bdata["faction"] != faction_id:
+                        continue
+                    targets = [bdata.get("name_cn", "").lower(), bdata.get("short", "").lower()]
+                    for t in targets:
+                        if t and len(token) >= 2 and token in t:
+                            brigade_id = bid
+                            i += 1
+                            break
+                    if brigade_id:
+                        break
 
         # 解析选项参数
         current_option = None
@@ -186,6 +259,25 @@ class MyPlugin(Star):
         if exclude_warbond_ids is not None and len(exclude_warbond_ids) == 0:
             exclude_warbond_ids = None
 
+        # 加载用户预设（命令行参数优先）
+        user_id = event.get_sender_id()
+        preset = apply_preset(user_id)
+        logger.info("[HD2] user={} faction={} warbond={} exclude_wb={} exclude_items={} lock={} mode={} preset={}".format(
+            user_id, faction_id, warbond_ids, exclude_warbond_ids, exclude_items,
+            locked_slots, mode, preset))
+        if preset.get("exclude_warbond_ids") and not exclude_warbond_ids:
+            exclude_warbond_ids = preset["exclude_warbond_ids"]
+        elif preset.get("exclude_warbond_ids") and exclude_warbond_ids:
+            exclude_warbond_ids = list(set(exclude_warbond_ids) | set(preset["exclude_warbond_ids"]))
+        if preset.get("exclude_items") and not exclude_items:
+            exclude_items = preset["exclude_items"]
+        if preset.get("locked_slots") and not locked_slots:
+            locked_slots = preset["locked_slots"]
+        elif preset.get("locked_slots") and locked_slots:
+            for k, v in preset["locked_slots"].items():
+                if k not in locked_slots:
+                    locked_slots[k] = v
+
         result = self.randomizer.randomize(
             faction_id=faction_id,
             brigade_id=brigade_id,
@@ -196,6 +288,8 @@ class MyPlugin(Star):
             mode=mode,
         )
 
+        logger.info("[HD2] result: faction={} case={} power={:.1f}".format(
+            result.faction_id, result.case_name, result.power_score))
         yield event.plain_result(result.format_for_chat())
 
     @filter.command("helloworld")
@@ -279,6 +373,116 @@ class MyPlugin(Star):
 
         return f"Unknown list type: {sub}"
 
+    def _handle_preset(self, args: list, event) -> str:
+        if not args:
+            return "Usage: /loadout preset <set|add|remove|show|clear> [名单|--filter 关键字]"
+
+        user_id = event.get_sender_id()
+        sub = args[0].lower()
+
+        if sub in ("set", "add", "remove"):
+            rest = args[1:]
+            preset = load_preset(user_id) if sub != "set" else {}
+
+            # 解析名单
+            tokens = " ".join(rest).split()
+            wb_ids = []
+            item_ids = []
+            unmatched = []
+            i = 0
+            while i < len(tokens):
+                token = tokens[i]
+                if token == "--filter":
+                    i += 1
+                    if i < len(tokens):
+                        keyword = tokens[i]
+                        # 在所有装备中搜索 name_cn 包含关键字的
+                        for pool in [PRIMARIES, SECONDARIES, GRENADES, STRATAGEMS, ARMORS, BOOSTERS]:
+                            for iid, item in pool.items():
+                                cn = item.get("name_cn", "")
+                                if keyword in cn:
+                                    item_ids.append(iid)
+                        i += 1
+                    continue
+                wid = self._match_warbond(token)
+                if wid:
+                    wb_ids.append(wid)
+                    i += 1
+                    continue
+                iid = self._match_item(token)
+                if iid:
+                    item_ids.append(iid)
+                    i += 1
+                    continue
+                unmatched.append(token)
+                i += 1
+
+            if unmatched:
+                return "未识别: {}".format(", ".join(unmatched))
+
+            if sub == "remove":
+                # 从预设中移除
+                existing_wb = preset.get("exclude_warbond_ids", [])
+                existing_items = preset.get("exclude_items", []) if isinstance(preset.get("exclude_items"), list) else preset.get("exclude_items", {}).get("all", [])
+                preset["exclude_warbond_ids"] = [w for w in existing_wb if w not in wb_ids]
+                preset["exclude_items"] = [i for i in existing_items if i not in item_ids]
+                if not preset["exclude_warbond_ids"]:
+                    preset.pop("exclude_warbond_ids", None)
+                if not preset["exclude_items"]:
+                    preset.pop("exclude_items", None)
+                action = "已移除"
+            else:
+                # set 或 add
+                if sub == "add":
+                    existing_wb = preset.get("exclude_warbond_ids", [])
+                    existing_items = preset.get("exclude_items", []) if isinstance(preset.get("exclude_items"), list) else preset.get("exclude_items", {}).get("all", [])
+                    wb_ids = list(set(existing_wb + wb_ids))
+                    item_ids = list(set(existing_items + item_ids))
+                preset["exclude_warbond_ids"] = wb_ids
+                preset["exclude_items"] = item_ids
+                action = "已保存" if sub == "set" else "已追加"
+
+            save_preset(user_id, preset)
+            lines = ["预设{}:".format(action)]
+            if preset.get("exclude_warbond_ids"):
+                names = [WARBONDS.get(wid, {}).get("name_cn", wid) for wid in preset["exclude_warbond_ids"]]
+                lines.append("  排除债券: {}".format(", ".join(names)))
+            if preset.get("exclude_items"):
+                inames = []
+                for iid in preset["exclude_items"]:
+                    item = self._find_item(iid)
+                    inames.append(item.get("name_cn", iid) if item else iid)
+                lines.append("  排除物品: {}".format(", ".join(inames)))
+            return "\n".join(lines)
+
+        elif sub == "show":
+            preset = load_preset(user_id)
+            if not preset:
+                return "你还没有保存预设。\n使用 /loadout preset set --no-warbond <债券> 来创建。"
+            lines = ["你的预设:"]
+            if preset.get("exclude_warbond_ids"):
+                wb_names = []
+                for wid in preset["exclude_warbond_ids"]:
+                    wb = WARBONDS.get(wid, {})
+                    cn = wb.get("name_cn", wid)
+                    wb_names.append(cn)
+                lines.append(f"  排除债券: {', '.join(wb_names)}")
+            if preset.get("exclude_items"):
+                item_names = []
+                for iid in preset["exclude_items"]:
+                    item = self._find_item(iid)
+                    item_names.append(item.get("name_cn", iid) if item else iid)
+                lines.append("  排除物品: {}".format(", ".join(item_names)))
+            if preset.get("locked_slots"):
+                lines.append(f"  锁定槽位: {preset['locked_slots']}")
+            return "\n".join(lines)
+
+        elif sub == "clear":
+            delete_preset(user_id)
+            return "预设已清除。"
+
+        return f"Unknown preset action: {sub}"
+
     def _handle_details(self, args: list) -> str:
         if not args:
             return "Usage: /loadout details <warbond|item> <name>"
@@ -338,11 +542,61 @@ class MyPlugin(Star):
             if wname_lower == wid.lower():
                 return wid
         for wid, wdata in WARBONDS.items():
-            if wname_lower in wdata["name"].lower():
+            target = (wdata["name"] + " " + wdata.get("name_cn", "")).lower()
+            if wname_lower in target or (len(wname_lower) >= 5 and target in wname_lower):
                 return wid
-            if wname_lower in wdata.get("name_cn", "").lower():
+            if wid.lower().startswith(wname_lower) or wname_lower.startswith(wid.lower()):
                 return wid
+            # 中文: 取重合度最高的
+            best_match = None
+            best_score = 0
+            for wid, wdata in WARBONDS.items():
+                cn = wdata.get("name_cn", "")
+                if cn and len(wname_lower) >= 2 and len(cn) >= 2:
+                    common = sum(1 for c in wname_lower if c in cn)
+                    threshold = min(len(wname_lower), len(cn)) * 0.6
+                    if common >= threshold and common > best_score:
+                        best_score = common
+                        best_match = wid
+            if best_match:
+                return best_match
         return ""
+
+    def _match_item(self, name: str) -> str:
+        """通过中文名/英文名/ID 匹配物品，返回 item id"""
+        name_lower = name.lower().strip()
+        pools = [PRIMARIES, SECONDARIES, GRENADES, STRATAGEMS, ARMORS, BOOSTERS]
+        # 精确匹配
+        for pool in pools:
+            for iid, item in pool.items():
+                if name_lower == iid.lower():
+                    return iid
+                if name_lower == item.get("name_cn", "").lower():
+                    return iid
+                if name_lower == item["name"].lower():
+                    return iid
+        # 中文重合度取最佳
+        best_match = None
+        best_score = 0
+        for pool in pools:
+            for iid, item in pool.items():
+                cn = item.get("name_cn", "")
+                if cn and len(name_lower) >= 2 and len(cn) >= 2:
+                    common = sum(1 for c in name_lower if c in cn)
+                    threshold = min(len(name_lower), len(cn)) * 0.6
+                    if common >= threshold and common > best_score:
+                        best_score = common
+                        best_match = iid
+        if best_match:
+            return best_match
+        return ""
+
+    def _find_item(self, iid: str):
+        """根据 id 找物品 dict"""
+        for pool in [PRIMARIES, SECONDARIES, GRENADES, STRATAGEMS, ARMORS, BOOSTERS]:
+            if iid in pool:
+                return pool[iid]
+        return None
 
     async def terminate(self):
         """可选择实现异步的插件销毁方法，当插件被卸载/停用时会调用。"""
