@@ -2377,7 +2377,7 @@ STRATAGEMS = {
 }
 
 
-def get_stratagem(sid: str):
+def get_stratagem(sid):
     return STRATAGEMS.get(sid)
 
 def get_all_stratagems():

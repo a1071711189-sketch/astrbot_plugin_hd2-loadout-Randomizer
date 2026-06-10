@@ -454,7 +454,7 @@ BOOSTERS = {
 }
 
 
-def get_booster(bid: str):
+def get_booster(bid):
     return BOOSTERS.get(bid)
 
 def get_all_boosters():

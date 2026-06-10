@@ -2562,15 +2562,14 @@ GRENADES = {
 }
 
 
-def get_weapon(weapon_id: str):
-    for pool in [PRIMARIES, SECONDARIES, GRENADES]:
-        if weapon_id in pool:
-            return pool[weapon_id]
+def get_weapon(wid):
+    for p in [PRIMARIES,SECONDARIES,GRENADES]:
+        if wid in p:return p[wid]
     return None
 
 def get_all_weapons():
-    result = []
-    result.extend(PRIMARIES.values())
-    result.extend(SECONDARIES.values())
-    result.extend(GRENADES.values())
-    return result
+    r=[]
+    r.extend(PRIMARIES.values())
+    r.extend(SECONDARIES.values())
+    r.extend(GRENADES.values())
+    return r
