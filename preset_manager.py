@@ -7,11 +7,22 @@ import json
 import os
 from pathlib import Path
 
-PRESETS_DIR = Path(__file__).parent / "presets"
+PRESETS_DIR = Path(__file__).parent / "data" / "plugin_data"
 
 
 def _ensure_dir():
-    PRESETS_DIR.mkdir(exist_ok=True)
+    PRESETS_DIR.mkdir(exist_ok=True, parents=True)
+
+
+# 迁移旧位置数据
+_OLD_DIR = Path(__file__).parent / "presets"
+if _OLD_DIR.exists():
+    _ensure_dir()
+    for f in _OLD_DIR.glob("*.json"):
+        dest = PRESETS_DIR / f.name
+        if not dest.exists():
+            import shutil
+            shutil.copy2(f, dest)
 
 
 def _user_file(user_id: str) -> Path:
