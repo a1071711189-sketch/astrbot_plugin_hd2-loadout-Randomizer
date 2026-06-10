@@ -53,11 +53,14 @@ class MyPlugin(Star):
     async def loadout_command(self, event: AstrMessageEvent):
         """Helldivers 2 随机负载构建器 - 主指令"""
         message_str = event.message_str.strip()
-        # 移除指令前缀
-        if message_str.startswith("/loadout"):
-            args_str = message_str[len("/loadout"):].strip()
-        else:
-            args_str = message_str
+        # 移除指令前缀和命令词
+        parts_all = message_str.split()
+        # 找到 "loadout" 的位置，取其后内容
+        try:
+            idx = [p.lower() for p in parts_all].index("loadout")
+            args_str = " ".join(parts_all[idx + 1:])
+        except ValueError:
+            args_str = ""
 
         if not args_str or args_str.lower() in ("random", ""):
             result = self.randomizer.randomize(faction_id="random")
