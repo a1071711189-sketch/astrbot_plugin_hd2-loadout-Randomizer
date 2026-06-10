@@ -4,7 +4,8 @@ from astrbot.api import logger
 from astrbot.api.message_components import *
 
 from .randomizer import LoadoutRandomizer
-from .preset_manager import load_preset, save_preset, delete_preset, apply_preset
+from .preset_manager import load_preset, save_preset, delete_preset, apply_preset, init_preset_dir
+from .llm_eval import evaluate_loadout
 from .data.factions import FACTIONS, BRIGADES, get_brigades_for_faction
 from .data.warbonds import WARBONDS
 from .data.weapons import PRIMARIES, SECONDARIES, GRENADES
@@ -28,6 +29,7 @@ Options (add after faction):
   --no-warbond base_game,superstore           Exclude these bonds from pool
   --no sg_451_cookout,flam_40_flamethrower    Exclude specific items by ID
   --mode optimized                            Auto-optimize synergy
+  --review                                    生成配装后由LLM评价
 
 Preset (per-user saved filters):
   /loadout preset set 焦土 遥遥领先 ...       (覆盖保存)
@@ -56,6 +58,7 @@ class MyPlugin(Star):
 
     async def initialize(self):
         """可选择实现异步的插件初始化方法，当实例化该插件类之后会自动调用该方法。"""
+        init_preset_dir(self.context)
 
     @filter.command("loadout")
     async def loadout_command(self, event: AstrMessageEvent):
@@ -120,6 +123,7 @@ class MyPlugin(Star):
         exclude_warbond_ids = None
         exclude_items = None
         mode = "random"
+        review = False
 
         # 派系识别（全面别名）
         faction_aliases = {
@@ -217,6 +221,9 @@ class MyPlugin(Star):
             elif part == "--mode":
                 current_option = "mode"
                 i += 1
+            elif part == "--review":
+                review = True
+                i += 1
             else:
                 if current_option == "lock":
                     # 解析 slot:item_id 对
@@ -291,6 +298,16 @@ class MyPlugin(Star):
         logger.info("[HD2] result: faction={} case={} power={:.1f}".format(
             result.faction_id, result.case_name, result.power_score))
         yield event.plain_result(result.format_for_chat())
+
+        if review:
+            review_text = await evaluate_loadout(
+                self, event,
+                result.format_for_chat(),
+                result.faction_name_cn or result.faction_name,
+                result.brigade_name_cn or result.case_name,
+            )
+            if review_text:
+                yield event.plain_result(review_text)
 
     @filter.command("helloworld")
     async def helloworld(self, event: AstrMessageEvent):

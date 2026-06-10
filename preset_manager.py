@@ -1,32 +1,67 @@
 """
 用户预设存储模块
-每个用户（以 sid/QQ号 识别）可保存自定义过滤预设，
-每次随机时自动应用。
+数据存储在 AstrBot 的 data/plugin_data 目录下，卸载重装不丢失。
 """
 import json
 import os
 from pathlib import Path
 
-PRESETS_DIR = Path(__file__).parent / "data" / "plugin_data"
+_presets_dir = None
+
+
+def init_preset_dir(context):
+    """
+    由插件在 initialize() 中调用，传入 Star 的 context。
+    优先使用 AstrBot 提供的持久化数据目录。
+    """
+    global _presets_dir
+
+    # 尝试从 context 获取 AstrBot data 目录
+    candidates = []
+
+    # AstrBot v4 常见路径
+    if hasattr(context, "plugin_data_dir"):
+        candidates.append(Path(context.plugin_data_dir))
+    if hasattr(context, "data_dir"):
+        candidates.append(Path(context.data_dir) / "plugin_data")
+    if hasattr(context, "get_data_dir"):
+        candidates.append(Path(context.get_data_dir()) / "plugin_data")
+
+    # 从 context 的其他属性推断
+    if hasattr(context, "config"):
+        cfg = context.config
+        for attr in ("data_dir", "plugin_data_dir", "storage_dir"):
+            if hasattr(cfg, attr):
+                candidates.append(Path(getattr(cfg, attr)) / "plugin_data")
+
+    # 回退: AstrBot 根目录下的 data/plugin_data
+    candidates.append(Path(os.getcwd()) / "data" / "plugin_data")
+
+    for candidate in candidates:
+        try:
+            candidate.mkdir(parents=True, exist_ok=True)
+            test = candidate / ".write_test"
+            test.touch()
+            test.unlink()
+            _presets_dir = candidate
+            return
+        except Exception:
+            continue
+
+    # 最终回退: 插件自身目录
+    _presets_dir = Path(__file__).parent / "data" / "plugin_data"
+    _presets_dir.mkdir(parents=True, exist_ok=True)
 
 
 def _ensure_dir():
-    PRESETS_DIR.mkdir(exist_ok=True, parents=True)
-
-
-# 迁移旧位置数据
-_OLD_DIR = Path(__file__).parent / "presets"
-if _OLD_DIR.exists():
-    _ensure_dir()
-    for f in _OLD_DIR.glob("*.json"):
-        dest = PRESETS_DIR / f.name
-        if not dest.exists():
-            import shutil
-            shutil.copy2(f, dest)
+    if _presets_dir is None:
+        _presets_dir = Path(__file__).parent / "data" / "plugin_data"
+    _presets_dir.mkdir(parents=True, exist_ok=True)
 
 
 def _user_file(user_id: str) -> Path:
-    return PRESETS_DIR / f"{user_id}.json"
+    _ensure_dir()
+    return _presets_dir / "{}.json".format(user_id)
 
 
 def load_preset(user_id: str) -> dict:
@@ -51,16 +86,7 @@ def delete_preset(user_id: str):
         path.unlink()
 
 
-def list_presets() -> list:
-    _ensure_dir()
-    return [p.stem for p in PRESETS_DIR.glob("*.json")]
-
-
 def apply_preset(user_id: str) -> dict:
-    """
-    返回用户的过滤参数，供 randomizer 使用。
-    返回格式: {"exclude_warbond_ids": [...], "exclude_items": [...], "locked_slots": {}}
-    """
     preset = load_preset(user_id)
     result = {}
     if preset.get("exclude_warbond_ids"):
