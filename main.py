@@ -493,7 +493,6 @@ class MyPlugin(Star):
 
     def _match_warbond(self, wname: str) -> str:
         wname_lower = wname.lower().strip()
-        # 精确匹配
         for wid, wdata in WARBONDS.items():
             if wname_lower == wdata["name"].lower():
                 return wid
@@ -501,20 +500,27 @@ class MyPlugin(Star):
                 return wid
             if wname_lower == wid.lower():
                 return wid
-        # 模糊匹配: 输入包含在名称中，或名称包含在输入中
         for wid, wdata in WARBONDS.items():
             target = (wdata["name"] + " " + wdata.get("name_cn", "")).lower()
             if wname_lower in target or (len(wname_lower) >= 5 and target in wname_lower):
                 return wid
-            # 容忍拼写差一个字符
             if wid.lower().startswith(wname_lower) or wname_lower.startswith(wid.lower()):
                 return wid
+            # 中文: 重合字符 >= min(输入长, 名长) * 0.7
+            cn = wdata.get("name_cn", "")
+            if cn and len(wname_lower) >= 2 and len(cn) >= 2:
+                common = sum(1 for c in wname_lower if c in cn)
+                threshold = min(len(wname_lower), len(cn)) * 0.6
+                if common >= threshold:
+                    return wid
         return ""
 
     def _match_item(self, name: str) -> str:
         """通过中文名/英文名/ID 匹配物品，返回 item id"""
         name_lower = name.lower().strip()
-        for pool in [PRIMARIES, SECONDARIES, GRENADES, STRATAGEMS, ARMORS, BOOSTERS]:
+        pools = [PRIMARIES, SECONDARIES, GRENADES, STRATAGEMS, ARMORS, BOOSTERS]
+        # 精确匹配
+        for pool in pools:
             for iid, item in pool.items():
                 if name_lower == iid.lower():
                     return iid
@@ -522,10 +528,18 @@ class MyPlugin(Star):
                     return iid
                 if name_lower == item["name"].lower():
                     return iid
-                # 模糊: 输入是物品中文名的一部分
+        # 模糊匹配
+        for pool in pools:
+            for iid, item in pool.items():
                 cn = item.get("name_cn", "")
                 if len(name_lower) >= 3 and name_lower in cn.lower():
                     return iid
+                # 中文重合度
+                if cn and len(name_lower) >= 2 and len(cn) >= 2:
+                    common = sum(1 for c in name_lower if c in cn)
+                    threshold = min(len(name_lower), len(cn)) * 0.6
+                    if common >= threshold:
+                        return iid
         return ""
 
     def _find_item(self, iid: str):
