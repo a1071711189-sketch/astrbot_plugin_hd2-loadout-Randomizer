@@ -1,4 +1,4 @@
-name: hd2-loadout-randomizer # 插件唯一识别名
+name: hd2_loadout_randomizer # 插件唯一识别名
 display_name: HD2 Loadout randomizer
 desc: Helldivers 2 随机装备构建器 - 派系/旅智能随机、槽位锁定、债券过滤
 version: v1.0.0
