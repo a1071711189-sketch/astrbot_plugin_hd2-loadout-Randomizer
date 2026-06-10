@@ -3,26 +3,8 @@ LLM 配装评价模块
 通过 AstrBot 的 LLM 引擎对随机配装进行分析
 """
 
-# AstrBot 4.x 的 LLM 调用方式:
-# Star 基类持有 self.context，可通过它获取 LLM 实例
-# self.context.get_llm() 返回 LLM 引擎
-# 或通过 self.context.text_completion(prompt) 同步调用
-
 
 async def evaluate_loadout(plugin_instance, event, loadout_text: str, faction_cn: str, case_cn: str) -> str:
-    """
-    异步调用 LLM 评价配装
-
-    Args:
-        plugin_instance: Star 实例 (self)
-        event: AstrMessageEvent
-        loadout_text: format_for_chat() 的输出文本
-        faction_cn: 中文派系名
-        case_cn: 中文旅团名
-
-    Returns:
-        LLM 评价文本，失败时返回空字符串
-    """
     try:
         prompt = (
             "你是《绝地潜兵2》的战术顾问。请用中文简要评价以下随机配装。\n"
@@ -34,34 +16,71 @@ async def evaluate_loadout(plugin_instance, event, loadout_text: str, faction_cn
             "请直接输出评价，不要复述配装列表。".format(faction_cn, case_cn, loadout_text)
         )
 
-        # 尝试多种 AstrBot LLM 调用方式
-        llm_response = None
+        if not hasattr(plugin_instance, "context") or not plugin_instance.context:
+            return ""
 
-        # 方式1: Star.context.get_llm()
-        if hasattr(plugin_instance, "context") and plugin_instance.context:
-            ctx = plugin_instance.context
-            if hasattr(ctx, "get_llm"):
-                llm = ctx.get_llm()
-                if llm and hasattr(llm, "text_completion"):
-                    llm_response = await llm.text_completion(prompt)
-            elif hasattr(ctx, "text_completion"):
-                llm_response = await ctx.text_completion(prompt)
+        ctx = plugin_instance.context
+        response = None
 
-        # 方式2: 通过 event 发送请求
-        if not llm_response and hasattr(event, "request_llm"):
-            llm_response = await event.request_llm(prompt)
+        # 尝试1: context.text_completion (AstrBot v4 常见方式)
+        if hasattr(ctx, "text_completion"):
+            try:
+                result = ctx.text_completion(prompt)
+                # ProviderRequest 不是 awaitable，直接同步返回
+                if hasattr(result, "result"):
+                    response = str(result.result)
+                elif hasattr(result, "text"):
+                    response = str(result.text)
+                elif isinstance(result, str):
+                    response = result
+                else:
+                    # 可能是 awaitable
+                    try:
+                        resp = await result
+                        if hasattr(resp, "text"):
+                            response = str(resp.text)
+                        elif hasattr(resp, "result"):
+                            response = str(resp.result)
+                        elif isinstance(resp, str):
+                            response = resp
+                        elif isinstance(resp, dict):
+                            response = resp.get("content", resp.get("text", str(resp)))
+                    except:
+                        pass
+            except Exception as e:
+                from astrbot.api import logger
+                logger.debug("[HD2] text_completion failed: {}".format(e))
 
-        # 方式3: 通过 event.get_platform() 的 LLM 能力
-        if not llm_response:
-            from astrbot.api.message_components import Plain
-            platform = event.get_platform()
-            if platform and hasattr(platform, "llm_chat"):
-                resp = await platform.llm_chat([{"role": "user", "content": prompt}])
-                if resp:
-                    llm_response = resp.get("content", "") if isinstance(resp, dict) else str(resp)
+        # 尝试2: LLMProvider
+        if not response:
+            try:
+                provider = ctx.get_using_provider()
+                if provider and hasattr(provider, "text_chat"):
+                    response = await provider.text_chat(prompt)
+                    if hasattr(response, "completion_text"):
+                        response = str(response.completion_text)
+                    elif isinstance(response, str):
+                        pass
+                    elif isinstance(response, dict):
+                        response = response.get("content", response.get("text", str(response)))
+            except:
+                pass
 
-        if llm_response:
-            return "💬 战术评价:\n" + str(llm_response).strip()
+        # 尝试3: 直接 pipeline
+        if not response:
+            try:
+                from astrbot.core.pipeline import ProcessPipeline
+                pipeline = ProcessPipeline()
+                pipeline_resp = await pipeline.text_completion(prompt, ctx)
+                if pipeline_resp:
+                    response = str(pipeline_resp)
+            except:
+                pass
+
+        if response:
+            response = str(response).strip()
+            if response:
+                return "💬 战术评价:\n" + response
 
     except Exception as e:
         from astrbot.api import logger
